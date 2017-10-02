@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "style.css",
+	"sources": [
+		"../../dev/stylesheets/style.scss",
+		"../../dev/stylesheets/components/body/_body.scss"
+	],
+	"mappings": "ACAA,AAAA,IAAI,CAAC;EACJ,gBAAgB,EAAE,IAAK,GACvB",
+	"names": []
+}

@@ -1,0 +1,26 @@
+.navbar_top {
+  list-style: none;
+  @include flex(row, space-between);
+  background-color: $color-blue;
+}
+
+.navbar__item_top {
+  flex: 1;
+}
+
+.navbar__link_top {
+  color: #fff;
+  display: block;
+  text-align: center;
+  padding: 15px 0;
+  text-transform: uppercase;
+  cursor: pointer;
+  font-family: "Futura", sans-serif;
+  font-weight: 500;
+  &:hover {
+    background-color: $color-light-blue;
+  }
+  .navbar__link_active {
+    background-color: $color-light-blue;
+  }
+}

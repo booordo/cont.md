@@ -1,7 +1,25 @@
+include bemto/bemto
+include data/_menu_items
+include data/_accordion_items
+include data/_erp_items
+include data/_blog_items
+include data/_news-preview
+include data/_reviews-preview
+include data/_solution_items
+include data/_thumbnails-clouds
+include data/_thumbnails-cont-5
+include data/_thumbnails-process
+
 doctype html
 html
-  head
-    title= title
-    link(rel='stylesheet', href='/stylesheets/style.css')
-  body
-    block content
+head
+	meta(charset="utf-8")
+	meta(content="width=device-width, initial-scale=1.0" name="viewport")
+	link(href="../css/style.css" rel="stylesheet")
+	title Contabilizare
+body
+	include components/header/_header
+	.content
+		block content
+	include components/footer/_footer
+	script(src="../js/script.js" defer)

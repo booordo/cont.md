@@ -1,0 +1,12 @@
++b.section_theme_clouds
+    +b.inner
+      +b.heading_theme_light._align_center._size_l
+        +e.wrapper
+          +e.IMG.image(src='../assets/images/1c.png')
+          +e.H1.title В облаке
+      +b.thumbnails
+        each item in thumbnails_clouds
+          +e.item
+            +e.image-box
+              +e.IMG.image(src=item.img)
+            +e.A.button.button._theme_flat._size_l(href="#")= item.text

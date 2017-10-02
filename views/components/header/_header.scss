@@ -1,0 +1,13 @@
+.header {
+  background-color: $color-white;
+}
+
+.header__panel {
+  @include flex(row, space-between, center);
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.header__navbar {
+	background-color: $color-blue;
+}

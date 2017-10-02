@@ -1,0 +1,13 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: $font-size-base;
+  color: $font-color-black;
+  font-family: $font-family-primary;
+}
+
+body {
+  overflow-x: hidden;
+}

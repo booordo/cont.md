@@ -1,0 +1,30 @@
+.page-title {
+
+}
+
+.page-title_size_s {
+
+}
+
+.page-title_size_l {
+	.page-title__name {
+		font-size: 4.133333333333333rem;
+		line-height: 1.02em;
+	}
+}
+
+.page-title_theme_dark {
+	color: #fff;
+}
+
+.page-title_theme_light {
+	color: #000;
+}
+
+.page-title__name {
+	font-family: $font-family-second;
+	font-weight: 500;
+	font-size: 3.666666666666667rem;
+	line-height: 1.145454545454545em;
+	text-transform: uppercase;
+}
