@@ -1,0 +1,11 @@
++b.section_theme_dark
+    +b.inner
+      +b.heading_theme_dark._align_center._size_l
+        +e.H1.title contabilizare 5.0
+        +e.SPAN.subtitle Ознакомьтесь с нашим новым предложением
+      +b.thumbnails
+        each item in thumbnails_cont
+          +e.item
+            +e.image-box
+              +e.IMG.image(src=item.img)
+            +e.A.button.button._theme_3d-reverse._size_m(href="#")= item.text

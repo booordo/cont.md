@@ -1,11 +1,11 @@
-extends ../common/pug/templates/_default
+extends layout
 
-block workarea
+block content
 	+b.section._size_s
 		+b.inner
 			+b.page-title
 						+e.name О КОМПАНИИ
-			include ../components/breadcrumbs/_breadcrumbs
+			include includes/components/breadcrumbs/_breadcrumbs
 	+b.section._no-padding
 		+b.inner
 			+b.about_theme_first

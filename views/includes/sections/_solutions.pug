@@ -1,0 +1,14 @@
++b.section
+	+b.inner
+		+b.heading_size_l._align_center
+			+e.title Contabilizare 4.0
+			+e.subtitle Отраслевые решения
+		+b.thumbnails_theme_solutions
+			each item in solutions
+				+e.A.item.image-swap.js-image-swap(data-src= item.img_hover href= 'solutions.html')
+					+e.DIV.image-box
+						+e.IMG.image(src= item.img)
+					+e.DIV.text-box
+						if item.text
+							+e.text= item.text
+						+e.text_accent= item.accent

@@ -1,0 +1,46 @@
++b.footer
+	+e.navbar
+		+b.grid.inner
+			+e.row
+				+e.col_8.grid
+					+e.row
+						+e.col_4
+							+b.heading_theme_light._align_left._size_s
+								+e.H3.title <span class="heading__accent">Категории</span> меню
+							+b.UL.navbar_bottom
+								each item in menu
+									+e.LI.item_bottom
+										+e.A.link_bottom(href= item.link)= item.title
+						+e.col_4
+							+b.heading_theme_light._align_left._size_s
+								+e.H3.title <span class="heading__accent">Наши</span> услуги
+							+b.UL.navbar_bottom
+								each item in menu_erp
+									+e.LI.item_bottom
+										+e.A.link_bottom(href= item.link)= item.title
+						+e.col_4
+							+b.heading_theme_light._align_left._size_s
+								+e.H3.title <span class="heading__accent">Наши</span> решения
+							+b.UL.navbar_bottom
+								each item in menu_solutions
+									+e.LI.item_bottom
+										+e.A.link_bottom(href= item.link)= item.title
+				+e.col_4
+					+b.heading_theme_light._align_left._size_s
+						+e.H3.title <span class="heading__accent">Связаться</span> с нами
+					+b.enum
+						+e.item
+							+e.SPAN.name Адрес:
+							+e.SPAN.desc МД 2012, г. Кишинев, Ул. Митрополит Варлаам, 65 оф. 420, 4-й этаж
+						+e.item
+							+e.SPAN.name Основной телефон/факс:
+							+e.SPAN.desc (373 22) 22-54-88
+						+e.item
+							+e.SPAN.name Линия консультаций:
+							+e.SPAN.desc (373 22) 22-39-85
+						+e.item
+							+e.SPAN.name Email:
+							+e.SPAN.desc cont@cont.md
+	+e.panel.inner
+		include ../../components/rights/_rights
+		include ../../components/social/_social
