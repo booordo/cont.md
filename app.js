@@ -1,31 +1,17 @@
-var express = require('express');
-var path = require('path');
-var favicon = require('serve-favicon');
-var logger = require('morgan');
-var cookieParser = require('cookie-parser');
-var bodyParser = require('body-parser');
-var sassMiddleware = require('node-sass-middleware');
+const express = require('express');
+const path = require('path');
+const favicon = require('serve-favicon');
+const logger = require('morgan');
+const cookieParser = require('cookie-parser');
+const bodyParser = require('body-parser');
+const sassMiddleware = require('node-sass-middleware');
 
-var index = require('./routes/index');
-var about = require('./routes/about');
-var solutions = require('./routes/solutions');
-var news = require('./routes/news');
-var blog = require('./routes/blog');
-var contacts = require('./routes/contacts');
-var reviews = require('./routes/reviews');
-var erp = require('./routes/erp');
-var interviews = require('./routes/interviews');
-var priceList = require('./routes/price-list');
-
-var app = express();
+const app = express();
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug');
 
-console.log(path.join(__dirname, 'styles'));
-
-// uncomment after placing your favicon in /public
 app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
 app.use(logger('dev'));
 app.use(bodyParser.json());
@@ -38,19 +24,23 @@ app.use(sassMiddleware({
   sourceMap: false,
   prefix: '/stylesheets/'
 }));
+app.use((req, res, next) => {
+  res.locals.originalUrl = req.originalUrl;
+  next();
+});
 
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use('/', index);
-app.use('/about', about);
-app.use('/solutions', solutions);
-app.use('/news', news);
-app.use('/blog', blog);
-app.use('/contacts', contacts);
-app.use('/reviews', reviews);
-app.use('/erp', erp);
-app.use('/interviews', interviews);
-app.use('/price_list', priceList);
+app.use('/', require('./routes/index'));
+app.use('/about', require('./routes/about'));
+app.use('/solutions', require('./routes/solutions'));
+app.use('/news', require('./routes/news'));
+app.use('/blog', require('./routes/blog'));
+app.use('/contacts', require('./routes/contacts'));
+app.use('/reviews', require('./routes/reviews'));
+app.use('/erp', require('./routes/erp'));
+app.use('/interviews', require('./routes/interviews'));
+app.use('/price_list', require('./routes/price-list'));
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

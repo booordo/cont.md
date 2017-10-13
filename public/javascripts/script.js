@@ -28,7 +28,7 @@ function setElementAction(action, el, fn) {
 			default:
 				break;
 		}
-	} else if (el instanceof HTMLElement) {
+	} else if (el instanceof HTMLElement || el instanceof HTMLDocument) {
 		switch (action) {
 			case 'onmouseenter':
 				el.onmouseenter = fn;

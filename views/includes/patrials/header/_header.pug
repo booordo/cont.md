@@ -8,7 +8,4 @@
 			include ../../components/social/_social
 	+e.navbar
 		+b.inner
-			+b.UL.navbar_top
-				each item in menu
-					+e.LI.item_top
-						+e.A.link_top(href= item.link)= item.title
+			include ../../components/navbar/_navbar_top

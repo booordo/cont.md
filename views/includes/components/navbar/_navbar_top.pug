@@ -1,0 +1,13 @@
+//- baseUrl - Корневой путь
+//- originalUrl - Полный путь
+//- Проверяется для расстановки активности
+
++b.UL.navbar_top
+	each item in menu
+		+e.LI.item_top(class= (item.link == baseUrl || item.link == originalUrl ? '_top_actived' : '') + ' ' + (item.subitems ? 'js-dropdown' : ''))
+			+e.A.link_top(href= item.link)= item.title
+			if item.subitems
+				+e.UL.sublist_top
+					each subitem in item.subitems
+						+e.LI.subitem_top(class= (subitem.link == originalUrl ? '_top_actived' : ''))
+							+e.A.sublink_top(href= subitem.link)= subitem.title

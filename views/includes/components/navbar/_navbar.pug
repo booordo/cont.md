@@ -1,4 +1,9 @@
 +b.UL.navbar
   each item in menu
     +e.LI.item
-      +e.A.link(href= item.href)= item.text
+      +e.A.link(href= item.link)= item.title
+      if item.subitems
+      	each subitem in item.subitems
+      		+e.UL.sublist
+      			+e.LI.subitem
+      				+e.A.sublink(href= subitem.link)= subitem.title	
