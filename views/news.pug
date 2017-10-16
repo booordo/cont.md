@@ -1,3 +1,17 @@
 extends layout
 
 block content
+	+b.section._size_s
+		+b.inner
+			+b.page-title
+				+e.name Новости
+			include includes/components/breadcrumbs/_breadcrumbs
+	+b.section._no-padding
+		+b.grid.inner
+			+e.row._justify_sb
+				+e.col._8
+					+b.heading
+						+e.H2.title Управление финансами
+				+e.col._4
+					+b.heading
+						+e.H2.title Категории статей

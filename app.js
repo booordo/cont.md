@@ -17,13 +17,6 @@ app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
-app.use(sassMiddleware({
-  src: path.join(__dirname, 'styles'),
-  dest: path.join(__dirname, 'public/stylesheets'),
-  indentedSyntax: false, // true = .sass and false = .scss
-  sourceMap: false,
-  prefix: '/stylesheets/'
-}));
 app.use((req, res, next) => {
   res.locals.originalUrl = req.originalUrl;
   next();
