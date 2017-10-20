@@ -1,9 +1,10 @@
 const express = require('express');
 const router = express.Router();
+const reviews = require('./../controllers/reviews');
+const urlToPage = require('./../middlewares/url-to-page');
 
-/* GET home page. */
-router.get('/', function(req, res, next) {
-  res.render('reviews');
-});
+router.use(urlToPage.base);
+
+router.get('/', reviews.index);
 
 module.exports = router;

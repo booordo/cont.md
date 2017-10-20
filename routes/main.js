@@ -1,10 +1,10 @@
 const express = require('express');
 const router = express.Router();
-const interviews = require('./../controllers/interviews');
+const main = require('./../controllers/main');
 const urlToPage = require('./../middlewares/url-to-page');
 
 router.use(urlToPage.base);
 
-router.get('/', interviews.index);
+router.get('/', main.index);
 
 module.exports = router;

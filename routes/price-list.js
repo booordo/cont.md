@@ -1,9 +1,10 @@
 const express = require('express');
 const router = express.Router();
+const priceList = require('./../controllers/price-list');
+const urlToPage = require('./../middlewares/url-to-page');
 
-/* GET home page. */
-router.get('/', function(req, res, next) {
-  res.render('price_list');
-});
+router.use(urlToPage.base);
+
+router.get('/', priceList.index);
 
 module.exports = router;

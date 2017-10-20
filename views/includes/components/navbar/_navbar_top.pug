@@ -5,7 +5,7 @@
 +b.UL.navbar_top
 	each item in menu
 		+e.LI.item_top(class= (item.link == baseUrl || item.link == originalUrl ? '_top_actived' : '') + ' ' + (item.subitems ? 'js-dropdown' : ''))
-			+e.A.link_top(href= item.link)= item.title
+			+e.A.link_top(href= (item.subitems ? '' : item.link))= item.title
 			if item.subitems
 				+e.UL.sublist_top
 					each subitem in item.subitems
