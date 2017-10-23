@@ -5,7 +5,6 @@ const logger = require('morgan');
 const cookieParser = require('cookie-parser');
 const bodyParser = require('body-parser');
 const urlToPage = require('./middlewares/url-to-page');
-
 const app = express();
 
 // view engine setup
@@ -18,7 +17,6 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(urlToPage.original);
-
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', require('./routes/main'));

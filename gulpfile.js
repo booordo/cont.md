@@ -18,9 +18,7 @@ gulp.task('browser-sync', ['nodemon'], function() {
 });
 
 gulp.task('nodemon', function (cb) {
-	
 	var started = false;
-	
 	return nodemon({script: './bin/www'}).on('start', () => {
 		if (!started) {
 			cb();
