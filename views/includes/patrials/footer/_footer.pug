@@ -5,29 +5,25 @@
 				+e.col_8.grid
 					+e.row
 						+e.col_4
-							+b.heading_theme_light._align_left._size_s
-								+e.H3.title <span class="heading__accent">Категории</span> меню
+							+b.H3.title._size_xs._weight_light <span class="title__accent">Категории</span> меню
 							+b.UL.navbar_bottom
 								each item in menu
 									+e.LI.item_bottom
 										+e.A.link_bottom(href= item.link)= item.title
 						+e.col_4
-							+b.heading_theme_light._align_left._size_s
-								+e.H3.title <span class="heading__accent">Наши</span> услуги
+							+b.H3.title._size_xs._weight_light <span class="title__accent">Наши</span> услуги
 							+b.UL.navbar_bottom
 								each item in menu_erp
 									+e.LI.item_bottom
 										+e.A.link_bottom(href= item.link)= item.title
 						+e.col_4
-							+b.heading_theme_light._align_left._size_s
-								+e.H3.title <span class="heading__accent">Наши</span> решения
+							+b.H3.title._size_xs._weight_light <span class="title__accent">Наши</span> решения
 							+b.UL.navbar_bottom
 								each item in menu_solutions
 									+e.LI.item_bottom
 										+e.A.link_bottom(href= item.link)= item.title
 				+e.col_4
-					+b.heading_theme_light._align_left._size_s
-						+e.H3.title <span class="heading__accent">Связаться</span> с нами
+					+b.H3.title._size_xs._weight_light <span class="title__accent">Связаться</span> с нами
 					+b.enum
 						+e.item
 							+e.SPAN.name Адрес:

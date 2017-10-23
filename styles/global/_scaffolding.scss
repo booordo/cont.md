@@ -6,8 +6,12 @@ html {
   font-size: $font-size-base;
   color: $font-color-black;
   font-family: $font-family-primary;
+  height: 100%;
 }
 
 body {
   overflow-x: hidden;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
 }

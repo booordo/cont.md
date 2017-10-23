@@ -4,10 +4,18 @@
 
 +b.UL.navbar_top
 	each item in menu
-		+e.LI.item_top(class= (item.link == baseUrl || item.link == originalUrl ? '_top_actived' : '') + ' ' + (item.subitems ? 'js-dropdown' : ''))
-			+e.A.link_top(href= (item.subitems ? '' : item.link))= item.title
-			if item.subitems
+		- let classList = '';
+		- let itemActived = item.link == baseUrl || item.link == originalUrl;
+		- let hasSubitems = !!item.subitems;
+		- classList = classList + ( itemActived ? '_top_actived ' : '' );
+		- classList = classList + ( hasSubitems ? '_top_multilevel' : '' );
+		+e.LI.item_top(class= classList)
+			+e.A.link_top(href= item.link)= item.title
+			if hasSubitems
 				+e.UL.sublist_top
 					each subitem in item.subitems
-						+e.LI.subitem_top(class= (subitem.link == originalUrl ? '_top_actived' : ''))
+						- let classList = '';
+						- let itemActived = subitem.link == originalUrl;
+						- classList = classList + ( itemActived ? '_top_actived ' : '' );
+						+e.LI.subitem_top(class= classList)
 							+e.A.sublink_top(href= subitem.link)= subitem.title

@@ -47,17 +47,19 @@ function setElementAction(action, el, fn) {
 
 function swapImage(e) {
 	elem = e.target;
-	img = elem.getElementsByTagName('IMG')[0];
+	target = elem.getElementsByClassName('js-image-swap-target')[0];
 
-	if (!img) return;
+	if (!target) {
+		target = elem;
+	}
 
-	oldSrc = img.getAttribute('src');
+	oldSrc = target.getAttribute('src');
 	newSrc = elem.getAttribute('data-src');
 
 	if (!oldSrc || !newSrc) return;
 
+	target.setAttribute('src', newSrc);
 	elem.setAttribute('data-src', oldSrc)
-	img.setAttribute('src', newSrc);
 }
 
 function toggleAccordion(e) {

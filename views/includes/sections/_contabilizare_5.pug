@@ -1,11 +1,12 @@
 +b.section_theme_dark
-    +b.inner
-      +b.heading_theme_dark._align_center._size_l
-        +e.H1.title contabilizare 5.0
-        +e.SPAN.subtitle Ознакомьтесь с нашим новым предложением
-      +b.thumbnails
-        each item in thumbnails_cont
-          +e.item
-            +e.image-box
-              +e.IMG.image(src=item.img)
-            +e.A.button.button._theme_3d-reverse._size_m(href="#")= item.text
+    +b.container.inner
+      +e.header
+        +b.H1.title._align_center._size_lg._color_white contabilizare 5.0
+        +b.SPAN.subtitle._align_center._color_white Ознакомьтесь с нашим новым предложением
+      +e.body
+        +b.thumbnails
+          each item in thumbnails_cont
+            +e.item
+              +e.image-box
+                +e.IMG.image(src=item.img)
+              +e.A.button.button._theme_3d-reverse._size_m(href="#")= item.text

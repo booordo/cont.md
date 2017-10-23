@@ -1,12 +1,12 @@
 .section {
   padding-top: 100px;
   padding-bottom: 100px;
-  background-color: $color-dark-white;
+  background-color: $color-white;
 }
 
 .section_size_s {
   padding-top: 50px;
-  padding-bottom: 50px;
+  padding-bottom: 25px;
 }
 
 .section_size_l {
@@ -45,6 +45,10 @@
   background-color: $color-light-gray;
 }
 
+.section_theme_about {
+  background-color: $color-dark-white;
+}
+
 .section_theme_dark {
   background-color: $color-black;
 }
@@ -65,4 +69,8 @@
   background-image: url('../images/bg_solutions.png');
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+.section_theme_erp {
+  background-image: url('../images/bg_erp.png');
 }

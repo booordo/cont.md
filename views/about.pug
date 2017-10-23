@@ -1,12 +1,11 @@
 extends layout
 
 block content
-	+b.section._size_s
+	+b.section._size_s._theme_about
 		+b.inner
-			+b.page-title
-						+e.name О КОМПАНИИ
+			+b.title._size_xl О КОМПАНИИ
 			include includes/components/breadcrumbs/_breadcrumbs
-	+b.section._no-padding
+	+b.section._no-padding._theme_about
 		+b.inner
 			+b.about_theme_first
 				+e.ARTICLE.article._align_right._align_top.article__._theme_light

@@ -1,13 +1,12 @@
 +b.section
 	+b.inner
-		+b.heading_size_l._align_center
-			+e.subtitle Другие отраслевые решения
-			+e.title Contabilizare 4.0
+		+b.subtitle._align_center Другие отраслевые решения
+		+b.title._align_center._size_lg Contabilizare 4.0
 		+b.thumbnails_theme_solutions
 			each item in solutions
-				+e.A.item.image-swap.js-image-swap(data-src= item.img_hover href= 'solutions.html')
+				+e.A.item.js-image-swap(data-src= item.img_hover href= 'solutions.html')
 					+e.DIV.image-box
-						+e.IMG.image(src= item.img)
+						+e.IMG.image.js-image-swap-target(src= item.img)
 					+e.DIV.text-box
 						if item.text
 							+e.text= item.text

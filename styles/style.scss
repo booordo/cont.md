@@ -9,13 +9,14 @@
 @import 'blocks/inner/inner';
 @import 'blocks/grid/grid';
 @import 'blocks/section/section';
+@import 'blocks/container/container';
 @import 'blocks/button/button';
-@import 'blocks/heading/heading';
+@import 'blocks/title/title';
+@import 'blocks/subtitle/subtitle';
 @import 'blocks/thumbnails/thumbnails';
 @import 'blocks/card/card';
 @import 'blocks/enum/enum';
 @import 'blocks/article/article';
-@import 'blocks/page-title/page-title';
 @import 'blocks/link/link';
 @import 'blocks/image/image';
 @import 'blocks/accordion/accordion';
@@ -35,3 +36,4 @@
 @import 'blocks/about/about';
 @import 'blocks/breadcrumbs/breadcrumbs';
 @import 'blocks/breadcrumbs/breadcrumbs_theme_dark';
+@import 'blocks/puzzle/puzzle';

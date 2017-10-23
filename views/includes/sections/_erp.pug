@@ -1,11 +1,10 @@
 +b.section_theme_blue
 	+b.inner
-		+b.heading_theme_dark._size_l._align_center
-			+e.title Разделы erp-системы
+		+b.title._size_lg._color_white._align_center Разделы erp-системы
 		+b.thumbnails._theme_pazzle
 			each item in erp
-				+e.A.item.image-swap.js-image-swap(data-src= item.img_hover)
+				+e.A.item.js-image-swap(data-src= item.img_hover)
 					+e.DIV.image-box
-						+e.IMG.image(src= item.img)
+						+e.IMG.image.js-image-swap-target(src= item.img)
 					+e.DIV.text-box
 						+e.text !{item.text}

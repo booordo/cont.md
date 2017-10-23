@@ -19,6 +19,12 @@
   background-color: $color-light-blue;
 }
 
+.navbar__item_top_multilevel {
+  .navbar__link_top {
+    pointer-events: none;
+  }
+}
+
 .navbar__link_top {
   color: #fff;
   display: block;
@@ -36,6 +42,7 @@
   display: none;
   background-color: #2a88c8;
   position: absolute;
+  z-index: 999;
   top: 100%;
   margin: 0;
   padding: 15px 0;
