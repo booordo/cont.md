@@ -1489,7 +1489,33 @@ body {
   overflow: hidden;
   border-radius: 100%;
   border: 6px solid #fff;
-  background-color: rgba(255, 255, 255, 0.2); }
+  background-color: rgba(255, 255, 255, 0.5); }
+
+.puzzle__inner {
+  position: absolute;
+  transform-origin: right bottom;
+  text-align: center; }
+
+.puzzle__link {
+  text-decoration: none;
+  color: #fff;
+  padding: 5px 15px;
+  border: 1px solid #fff;
+  display: inline-block;
+  opacity: 0;
+  text-align: center;
+  font-size: 0.8rem;
+  cursor: pointer;
+  user-select: none; }
+
+.puzzle__text {
+  font-weight: 500;
+  font-size: 1.2rem;
+  line-height: 1.3em;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 15px;
+  user-select: none; }
 
 .puzzle__item {
   position: absolute;
@@ -1504,29 +1530,61 @@ body {
     background: linear-gradient(180deg, #8e44ad 305px, transparent 305px); }
     .puzzle__item:hover + .puzzle__separator .puzzle__connect {
       background-color: #8e44ad; }
+    .puzzle__item:hover .puzzle__link {
+      opacity: 1; }
+    .puzzle__item:hover .puzzle__text {
+      color: #fff; }
 
 .puzzle__item_actived {
   background: linear-gradient(180deg, #8e44ad 305px, transparent 305px); }
   .puzzle__item_actived + .puzzle__separator .puzzle__connect {
     background-color: #8e44ad; }
+  .puzzle__item_actived .puzzle__link {
+    opacity: 1; }
+  .puzzle__item_actived .puzzle__text {
+    color: #fff; }
 
 .puzzle__item_top {
   transform: rotate(60deg) skewX(30deg); }
+  .puzzle__item_top .puzzle__inner {
+    transform: skewX(-30deg) rotate(-60deg);
+    bottom: 150px;
+    right: 50px; }
 
 .puzzle__item_top_right {
   transform: rotate(120deg) skewX(30deg); }
+  .puzzle__item_top_right .puzzle__inner {
+    transform: skewX(-30deg) rotate(-120deg);
+    bottom: 205px;
+    right: 75px; }
 
 .puzzle__item_bottom_right {
   transform: rotate(180deg) skewX(30deg); }
+  .puzzle__item_bottom_right .puzzle__inner {
+    transform: skewX(-30deg) rotate(-180deg);
+    bottom: 180px;
+    right: 145px; }
 
 .puzzle__item_bottom {
   transform: rotate(240deg) skewX(30deg); }
+  .puzzle__item_bottom .puzzle__inner {
+    transform: skewX(-30deg) rotate(-240deg);
+    bottom: 80px;
+    right: 230px; }
 
 .puzzle__item_bottom_left {
   transform: rotate(300deg) skewX(30deg); }
+  .puzzle__item_bottom_left .puzzle__inner {
+    transform: skewX(-30deg) rotate(-300deg);
+    bottom: 60px;
+    right: 180px; }
 
 .puzzle__item_top_left {
   transform: rotate(360deg) skewX(30deg); }
+  .puzzle__item_top_left .puzzle__inner {
+    transform: skewX(-30deg) rotate(-360deg);
+    bottom: 70px;
+    right: 110px; }
 
 .puzzle__circle {
   position: absolute;
@@ -1543,9 +1601,9 @@ body {
 .puzzle__separator {
   position: absolute;
   z-index: 100;
-  top: 292px;
+  top: 294px;
   left: -6px;
-  height: 32px;
+  height: 30px;
   width: 330px;
   overflow: hidden;
   transform-origin: right bottom; }
