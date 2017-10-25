@@ -29,6 +29,14 @@
 	user-select: none;
 }
 
+.puzzle__link_big {
+	opacity: 1;
+	margin-top: 20px;
+	font-size: 1rem;
+	font-weight: 300;
+	padding: 7px 25px;
+}
+
 .puzzle__text {
 	font-weight: 500;
 	font-size: 1.2rem;
@@ -135,7 +143,10 @@
 
 .puzzle__circle {
 	position: absolute;
-	display: block;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
 	z-index: 110;
 	top: 174px;
 	left: 174px;
@@ -213,4 +224,31 @@
 
 .puzzle__separator_bottom_left {
 	transform: rotate(300deg);
+}
+
+.puzzle__title {
+	font-size: 119px;
+	font-family: $font-family-second;
+	font-weight: 500;
+	color: #fff;
+	line-height: 0.9em;
+}
+
+.puzzle__subtitle {
+	font-size: 20px;
+	font-family: $font-family-second;
+	font-weight: 300;
+	color: #fff;
+	line-height: 1em;
+	text-transform: uppercase;
+	letter-spacing: 11px;
+	margin-left: 5px;
+}
+
+.puzzle__choice {
+	font-size: 19px;
+	font-weight: 500;
+	color: $color-yellow;
+	line-height: 1em;
+	text-transform: uppercase;
 }
