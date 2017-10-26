@@ -1,7 +1,7 @@
 extends layout
 
 block content
-	+b.section._size_s
+	+b.section._size_xs
 		+b.inner
 			+b.title._size_xl Новости
 			include includes/components/breadcrumbs/_breadcrumbs
@@ -10,5 +10,25 @@ block content
 			+e.row._justify_sb
 				+e.col._8
 					+b.H2.title._size_md Управление финансами
+					+b.news-list
+						each item in news
+							+e.A.item(href= item.link)
+								+e.DIV.label= item.date
+								+e.DIV.image-box
+									+e.IMG.image(src = item.img)
+								+e.DIV.text= item.text
+					+b.pagination
+						+e.A.controls.__arrow_left(href= "#") &laquo;
+						+e.A.controls.__page._actived(href= "#") 1
+						+e.A.controls.__page(href= "#") 2
+						+e.SPAN.space ...
+						+e.A.controls.__page(href= "#") 25
+						+e.A.controls.__arrow_right(href= "#") &raquo;
 				+e.col._4
 					+b.H2.title._size_md Категории статей
+					+b.news-category
+						each item in news_category
+							+e.item
+								+e.A.link(href= item.link) #[+e.angle &#x25B8;] !{item.text}
+								+e.count= item.count
+

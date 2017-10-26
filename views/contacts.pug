@@ -1,7 +1,51 @@
 extends layout
 
 block content
-	+b.section._size_s
+	+b.section._size_xs
 		+b.inner
 			+b.title._size_xl Контакты
 			include includes/components/breadcrumbs/_breadcrumbs
+	+b.section._size_s
+		+b.grid.inner
+			+e.row
+				+e.col._6
+					+b.definition
+						+e.left
+							+e.title Телефон/факс:
+						+e.right
+							+e.text +373 (22) 22-54-88
+					+b.definition
+						+e.left
+							+e.title Консультация:
+						+e.right
+							+e.text +373 (22) 22-39-85
+					+b.definition
+						+e.left
+							+e.title e-mail:
+						+e.right
+							+e.text
+								+e.A.link(href= "#") cont@cont.md
+								.
+									- вопросы общего характера 
+							+e.text
+								+e.A.link(href= "#") cont@cont.md
+								.
+									- отдел программного обеспечения 
+					+b.definition
+						+e.left
+							+e.title Адрес:
+						+e.right
+							+e.text МД 2012, г. Кишинев, Ул. Митрополит Варлаам,
+							+e.text 65 оф. 420, 4-й этаж
+				+e.col._6
+					+b.definition
+						+e.left
+							+e.title Реквизиты:
+						+e.right
+							+e.text Название: SRL "Contabilizare-Studiere"
+							+e.text Ф/К: 1003600096557
+							+e.text НДС: 0205672
+							+e.text ВС: "Fincombank" SA fil.N1 Chishinau
+							+e.text C/B: FTMDMD2X735
+							+e.text C/D: MD12FT222480100004525498
+	+b.section_theme_map._size_s
