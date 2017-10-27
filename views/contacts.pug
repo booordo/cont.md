@@ -26,11 +26,11 @@ block content
 							+e.text
 								+e.A.link(href= "#") cont@cont.md
 								.
-									- вопросы общего характера 
+									 - вопросы общего характера 
 							+e.text
-								+e.A.link(href= "#") cont@cont.md
+								+e.A.link(href= "#") prof@cont.md
 								.
-									- отдел программного обеспечения 
+									 - отдел программного обеспечения 
 					+b.definition
 						+e.left
 							+e.title Адрес:
@@ -49,3 +49,15 @@ block content
 							+e.text C/B: FTMDMD2X735
 							+e.text C/D: MD12FT222480100004525498
 	+b.section_theme_map._size_s
+		+b.inner
+			+b.FORM.feedback(method="POST")
+				+e.group
+					+e.INPUT.input_size_s(type="text" placeholder="Ваше имя" name="name")
+					+e.INPUT.input_size_s(type="text" placeholder="Телефон" name="phone")
+				+e.INPUT.input_size_l(type="text" placeholder="E-mail" name="email")
+				+e.INPUT.input_size_l(type="text" placeholder="Название вашей организации" name="organization")
+				+e.INPUT.input_size_l(type="text" placeholder="Задайте ваш вопрос" name="message")
+				+e.group
+					+e.captcha 
+						+b.g-recaptcha(data-sitekey="6Lek5icUAAAAAJwQWt8fcK1wbxzb_UqvMK7zpTLL")
+					+e.INPUT.submit.button._theme_3d(type="submit" name="submit" value="Отправить")

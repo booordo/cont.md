@@ -5,3 +5,22 @@ block content
 		+b.inner
 			+b.title._size_xl Прайс-лист
 			include includes/components/breadcrumbs/_breadcrumbs
+	+b.section._no-padding
+		+b.grid.inner
+			+e.row_justify_sb
+				+e.col_8
+					+b.price-list
+						each table in price_list
+							+e.TABLE.table
+								+e.CAPTION.caption= table.caption
+								+e.TR.header
+									each header, index in table.headers
+										+e.TH.col_header(class= ( index == 1, "_name", "" ))= header
+								each row, index in table.rows 
+									+e.TR.row
+										+e.TD.col_number= index + 1
+										+e.TD.col_name !{row.name}
+										each price in row.prices
+											+e.TD.col_price= price
+				+e.col_4
+					+b.price-sections

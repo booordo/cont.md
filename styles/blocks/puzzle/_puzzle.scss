@@ -73,10 +73,6 @@
 }
 
 .puzzle__item_actived {
-	-webkit-transition: background 1s ease-out;  
-    -moz-transition: background 1s ease-out;  
-    -o-transition: background 1s ease-out;  
-    transition: background 1s ease-out;
 	background: linear-gradient(180deg, #8e44ad 305px, transparent 305px);
 	& + .puzzle__separator {
 		.puzzle__connect {
@@ -179,6 +175,30 @@
 	}
 }
 
+.puzzle__separator_left {
+	transform: rotate(0deg);
+}
+
+.puzzle__separator_top_left {
+	transform: rotate(60deg);
+}
+
+.puzzle__separator_top_right {
+	transform: rotate(120deg);
+}
+
+.puzzle__separator_right {
+	transform: rotate(180deg);
+}
+
+.puzzle__separator_bottom_right {
+	transform: rotate(240deg);
+}
+
+.puzzle__separator_bottom_left {
+	transform: rotate(300deg);
+}
+
 .puzzle__line {
 	position: absolute;
 	top: 0;
@@ -204,30 +224,6 @@
 	border-radius: 100%;
 	bottom: -10px;
 	left: 72px;
-}
-
-.puzzle__separator_left {
-	transform: rotate(0deg);
-}
-
-.puzzle__separator_top_left {
-	transform: rotate(60deg);
-}
-
-.puzzle__separator_top_right {
-	transform: rotate(120deg);
-}
-
-.puzzle__separator_right {
-	transform: rotate(180deg);
-}
-
-.puzzle__separator_bottom_right {
-	transform: rotate(240deg);
-}
-
-.puzzle__separator_bottom_left {
-	transform: rotate(300deg);
 }
 
 .puzzle__title {

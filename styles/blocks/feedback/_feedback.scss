@@ -1,0 +1,37 @@
+.feedback {
+	background-color: #fff;
+	padding: 70px 60px;
+	width: 50%;
+}
+
+.feedback__group {
+	display: flex;
+	justify-content: space-between;
+}
+
+.feedback__input {
+	display: block;
+	border-bottom: 1px solid #bdc3c7;
+	margin-bottom: 20px;
+	padding: 10px 10px;
+	color: #000;
+	font-size: 1.066666666666667rem;
+}
+
+.feedback__input_size_s {
+	width: calc(50% - 10px);
+}
+
+.feedback__input_size_l {
+	width: 100%;
+}
+
+.feedback__submit {
+	margin-top: 20px;
+	width: calc(50% - 10px);
+}
+
+.feedback__captcha {
+	width: calc(50% - 10px);
+	margin-top: 20px;
+}
