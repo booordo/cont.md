@@ -1,0 +1,35 @@
+.news-detail {
+	padding-top: 25px;
+	padding-bottom: 25px;
+	&:after {
+		display: table;
+		content: '';
+		clear: both;
+	}
+	&:before {
+		display: table;
+		content: '';
+		clear: both;
+	}
+}
+
+.news-detail__date {
+	display: inline-block;
+	padding: 4px 20px;
+	background-color: $color-yellow;
+	margin-bottom: 25px;
+}
+
+.news-detail__text {
+	color: #000;
+	font-size: 1.133333333333333rem;
+	line-height: 1.470588235294118em;
+	margin-bottom: 10px;
+}
+
+.news-detail__image {
+	max-width: 350px;
+	float: right;
+	margin-left: 15px;
+	margin-bottom: 15px;
+}

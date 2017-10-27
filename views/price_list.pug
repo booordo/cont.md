@@ -11,7 +11,7 @@ block content
 				+e.col_8
 					+b.price-list
 						each table in price_list
-							+e.TABLE.table
+							+e.TABLE.table(id= table.id)
 								+e.CAPTION.caption= table.caption
 								+e.TR.header
 									each header, index in table.headers
@@ -23,4 +23,7 @@ block content
 										each price in row.prices
 											+e.TD.col_price= price
 				+e.col_4
-					+b.price-sections
+					+b.price-category
+						each item in price_category
+							+e.item
+								+e.A.link(href= item.link) !{item.text}
