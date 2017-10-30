@@ -56,20 +56,7 @@
 	top: -6px;
 	left: -6px;
 	transform-origin: right bottom;
-	&:hover {
-		background: linear-gradient(180deg, #8e44ad 305px, transparent 305px);
-		& + .puzzle__separator {
-			.puzzle__connect {
-				background-color: #8e44ad;
-			}
-		}
-		.puzzle__link {
-			opacity: 1;
-		}
-		.puzzle__text {
-			color: #fff;
-		}
-	}
+	
 }
 
 .puzzle__item_actived {

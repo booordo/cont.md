@@ -82,7 +82,14 @@ function toggleAccordion(e) {
 
 function activateSeporatorHandler (e) {
 	let el = e.target;
-	activateSeporator (el);
+
+	if (e.type == 'mouseleave') {
+		el.classList.remove('puzzle__item_actived');
+		deactivateSeparator (el);
+	} else {
+		el.classList.add('puzzle__item_actived');
+		activateSeporator (el);
+	}
 }
 
 function activateSeporator (el) {
@@ -94,7 +101,19 @@ function activateSeporator (el) {
 		sibling = seporators[seporators.length - 1];
 	}
 
-	sibling.classList.toggle('puzzle__separator_actived')
+	sibling.classList.add('puzzle__separator_actived')
+}
+
+function deactivateSeparator (el) {
+	let parent = el.parentElement;
+	let sibling = el.previousElementSibling;
+
+	if (!sibling) {
+		let seporators = parent.getElementsByClassName('puzzle__separator');
+		sibling = seporators[seporators.length - 1];
+	}
+
+	sibling.classList.remove('puzzle__separator_actived')
 }
 
 function activatePuzzleByLine (e) {
@@ -107,8 +126,13 @@ function activatePuzzleByLine (e) {
 		nextParentSibling = allParentItemSiblings[0];
 	}
 
-	parent.classList.toggle('puzzle__separator_actived');
-	nextParentSibling.classList.toggle('puzzle__item_actived');
+	if (e.type == 'mouseleave') {
+		parent.classList.remove('puzzle__separator_actived');
+		nextParentSibling.classList.remove('puzzle__item_actived');	
+	} else {
+		parent.classList.add('puzzle__separator_actived');
+		nextParentSibling.classList.add('puzzle__item_actived');
+	}
 }
 
 function activatePuzzleByConnect (e) {
@@ -121,6 +145,11 @@ function activatePuzzleByConnect (e) {
 		prevParentSibling = allParentItemSiblings[allParentItemSiblings.length - 1];
 	}
 
-	prevParentSibling.classList.toggle('puzzle__item_actived');
-	activateSeporator (prevParentSibling);
+	if (e.type == 'mouseleave') {
+		prevParentSibling.classList.remove('puzzle__item_actived');
+		deactivateSeparator (prevParentSibling);
+	} else {
+		prevParentSibling.classList.add('puzzle__item_actived');
+		activateSeporator (prevParentSibling);
+	}
 }

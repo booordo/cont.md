@@ -1549,14 +1549,6 @@ input {
   top: -6px;
   left: -6px;
   transform-origin: right bottom; }
-  .puzzle__item:hover {
-    background: linear-gradient(180deg, #8e44ad 305px, transparent 305px); }
-    .puzzle__item:hover + .puzzle__separator .puzzle__connect {
-      background-color: #8e44ad; }
-    .puzzle__item:hover .puzzle__link {
-      opacity: 1; }
-    .puzzle__item:hover .puzzle__text {
-      color: #fff; }
 
 .puzzle__item_actived {
   background: linear-gradient(180deg, #8e44ad 305px, transparent 305px); }
