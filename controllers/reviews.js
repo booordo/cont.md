@@ -1,3 +1,4 @@
 exports.index = function (req, res, next) {
-	res.render('reviews');
+	req.breadcrumbs('Отзывы');
+	res.render('reviews', {breadcrumbs: req.breadcrumbs()});
 }

@@ -1,3 +1,4 @@
 exports.index = function (req, res, next) {
-	res.render('contacts');
+	req.breadcrumbs('Контакты');
+	res.render('contacts', {breadcrumbs: req.breadcrumbs()});
 }

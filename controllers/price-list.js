@@ -1,3 +1,4 @@
 exports.index = function (req, res, next) {
-	res.render('price_list');
+	req.breadcrumbs('Прайс-лист');
+	res.render('price_list', {breadcrumbs: req.breadcrumbs()});
 }

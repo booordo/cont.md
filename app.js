@@ -5,6 +5,7 @@ const logger = require('morgan');
 const cookieParser = require('cookie-parser');
 const bodyParser = require('body-parser');
 const urlToPage = require('./middlewares/url-to-page');
+const breadcrumbs = require('express-breadcrumbs');
 const app = express();
 
 // view engine setup
@@ -17,8 +18,10 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(urlToPage.original);
+app.use(breadcrumbs.init());
 app.use(express.static(path.join(__dirname, 'public')));
 
+app.use('/', breadcrumbs.setHome({name: 'Главная', url: '/'}));
 app.use('/', require('./routes/main'));
 app.use('/about', require('./routes/about'));
 app.use('/solutions', require('./routes/solutions'));

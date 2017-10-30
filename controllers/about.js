@@ -1,3 +1,4 @@
 exports.index = function (req, res, next) {
-	res.render('about');
+	req.breadcrumbs('О компании', '/about');
+	res.render('about', {breadcrumbs: req.breadcrumbs()});
 }

@@ -1,4 +1,8 @@
-+b.breadcrumbs._theme_dark
-	+e.A.link.link(href="/") Главная
-	+e.SPAN.separator
-	+e.A.link.link_disable(href="/about") О компании
++b.breadcrumbs_theme_dark
+	- let lastelement = breadcrumbs.length - 1;
+	each breadcrumb, i in breadcrumbs
+		if i != lastelement
+			+e.A.link.link(href= breadcrumb.url) #{breadcrumb.name}
+			+e.SPAN.separator
+		else
+			+e.A.link.link_disable(href= breadcrumb.url) #{breadcrumb.name}
