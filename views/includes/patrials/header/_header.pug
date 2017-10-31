@@ -6,6 +6,11 @@
 			include ../../components/contact/_contact
 		+e.social
 			include ../../components/social/_social
-	+e.navbar
+		+e.action
+			+b.navbar-toggler.js-dropdown-toggler(data-target='navbar-top')
+				+e.line
+				+e.line
+				+e.line
+	+e.navbar(id='navbar-top')
 		+b.inner
 			include ../../components/navbar/_navbar_top

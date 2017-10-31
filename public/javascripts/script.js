@@ -4,6 +4,8 @@ window.onload = function() {
 	const puzzleElements = document.getElementsByClassName("js-puzzle-item");
 	const puzzleLineElements = document.getElementsByClassName("js-puzzle-line");
 	const puzzleConnectElements = document.getElementsByClassName("js-puzzle-connect");
+	const dropdownTogglerElements = document.getElementsByClassName("js-dropdown-toggler");
+	const dropdownSublistElements = document.getElementsByClassName("navbar__item_top_multilevel");
 
 	setElementAction('onmouseenter', imageSwapElements, swapImage);
 	setElementAction('onmouseleave', imageSwapElements, swapImage);
@@ -14,6 +16,8 @@ window.onload = function() {
 	setElementAction('onmouseleave', puzzleLineElements, activatePuzzleByLine);
 	setElementAction('onmouseenter', puzzleConnectElements, activatePuzzleByConnect);
 	setElementAction('onmouseleave', puzzleConnectElements, activatePuzzleByConnect);
+	setElementAction('onclick', dropdownTogglerElements, navbarToggle);
+	setElementAction('onclick', dropdownSublistElements, dropdownSublist);
 }
 
 function setElementAction(action, el, fn) {
@@ -151,5 +155,27 @@ function activatePuzzleByConnect (e) {
 	} else {
 		prevParentSibling.classList.add('puzzle__item_actived');
 		activateSeporator (prevParentSibling);
+	}
+}
+
+function navbarToggle (e) {
+	let el = e.target;
+	let target;
+
+	if (el.classList.contains('js-dropdown-toggler')) {
+		target = document.getElementById(el.attributes['data-target'].value);
+	} else {
+		target = document.getElementById(el.parentElement.attributes['data-target'].value);
+	}
+	
+	target.classList.toggle('header__navbar_actived');
+}
+
+function dropdownSublist (e) {
+	let el = e.target;
+	let sublist = el.getElementsByClassName('navbar__sublist_top')[0];
+
+	if (window.innerWidth < 901 ) {
+		sublist.classList.toggle('navbar__sublist_top_actived');
 	}
 }

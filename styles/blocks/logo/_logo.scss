@@ -27,3 +27,16 @@
   padding-left: 3px;
   color: $font-color-black;
 }
+
+@media only screen and (max-width: 900px) {
+  .logo__title {
+    font-size: 1.65rem;
+  }
+  .logo__subtitle {
+    font-size: 0.67rem;
+  }
+  .logo__image {
+    height: 40px;
+    width: auto;
+  }
+}

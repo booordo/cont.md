@@ -11,3 +11,30 @@
 .header__navbar {
 	background-color: $color-blue;
 }
+
+.header__action {
+	display: none;
+}
+
+@media only screen and (max-width: 900px) {
+	.header__action {
+		display: block;
+	}
+
+	.header__contact {
+		display: none;
+	}
+
+	.header__social {
+		display: none;
+	}
+
+	.header__navbar {
+		display: none;
+		background-color: #2a2a2c;
+	}
+
+	.header__navbar_actived {
+		display: block;
+	}
+}

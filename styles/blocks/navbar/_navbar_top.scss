@@ -7,10 +7,12 @@
 .navbar__item_top {
   position: relative;
   flex: 1;
-  &:hover {
-    background-color: $color-light-blue;
-    .navbar__sublist_top {
-      display: block;
+  @media only screen and (min-width: 901px) {
+    &:hover {
+      background-color: $color-light-blue;
+      .navbar__sublist_top {
+        display: block;
+      }
     }
   }
 }
@@ -50,6 +52,10 @@
   white-space: nowrap;
 }
 
+.navbar__sublist_top_actived {
+  display: block;
+}
+
 .navbar__subitem_top {
   &:hover {
     background-color: #3498db;
@@ -73,5 +79,34 @@
     background-image: url('../images/right_angle_full.png');
     background-repeat: no-repeat;
     background-position: center center;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .navbar_top {
+    flex-direction: column;
+    background-color: #343434;
+    margin-left: -15px;
+    margin-right: -15px;
+  }
+  .navbar__item_top {
+    border-bottom: 1px solid #2a2a2a;
+  }
+  .navbar__sublist_top {
+    padding: 0;
+    position: static;
+    background-color: #444446;
+    border-top: 1px solid #2a2a2a;
+    white-space: normal;
+    text-align: center
+  }
+  .navbar__sublink_top {
+    border-bottom: 1px solid #2a2a2a;
+    font-family: "Futura", sans-serif;
+    text-transform: uppercase;
+    font-weight: 500;
+    &:before {
+      display: none;
+    }
   }
 }
