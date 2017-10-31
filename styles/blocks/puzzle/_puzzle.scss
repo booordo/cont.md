@@ -1,3 +1,5 @@
+$element-count: 6;
+
 $border-width: 6px;
 $border: $border-width solid #fff;
 $puzzle-diameter: 660px;
@@ -27,7 +29,7 @@ $mobile-circle-font-size-title: $circle-font-size-title * $mobile-font-multipler
 
 .puzzle {
 	position: relative;
-	z-index: 10;
+	z-index: 30;
 	overflow: hidden;
 	margin: 0 auto;
 	width: $puzzle-diameter;
@@ -35,140 +37,56 @@ $mobile-circle-font-size-title: $circle-font-size-title * $mobile-font-multipler
 	border: $border;
 	border-radius: 100%;
 	background-color: rgba(#fff, 0.5);
-	@media only screen and (max-width: 900px) {
-		width: $mobile-puzzle-diameter;
-		height: $mobile-puzzle-diameter;
-		border: $mobile-border;
+}
+
+.puzzle__item {
+	display: block;
+	position: absolute;
+	width: $puzzle-radius;
+	height: $puzzle-radius;
+	top: - $border-width;
+	left: - $border-width;
+	z-index: 20;
+	transform-origin: right bottom;
+	transform: rotate(0deg) skewX(30deg);
+	@for $i from 1 through $element-count {
+		&:nth-of-type(#{$i}) {
+			transform: rotate(60deg * $i) skewX(30deg);
+			.puzzle__text-box {
+				transform: skewX(-30deg) rotate(-60deg * $i);
+			}
+		}
+	}
+}
+
+.puzzle__item_actived {
+	.puzzle__inner {
+		background-color: #f00;
+	}
+	.puzzle__line {
+		background-color: #f00;
+	}
+}
+
+.puzzle__item_actived_connect {
+	.puzzle__connect {
+		background-color: #f00;
 	}
 }
 
 .puzzle__inner {
-	position: absolute;
-	transform-origin: right bottom;
+	height: 300px;
 	text-align: center;
 	@media only screen and (max-width: 900px) {
 		display: none;
 	}
 }
 
-.puzzle__link {
-	text-decoration: none;
-	color: #fff;
-	padding: 5px 15px;
-	border: 1px solid #fff;
-	display: inline-block;
-	opacity: 0;
-	text-align: center;
-	font-size: 0.8rem;
-	cursor: pointer;
-	user-select: none;
-}
-
-.puzzle__link_big {
-	opacity: 1;
-	margin-top: 20px;
-	font-size: 1rem;
-	font-weight: 300;
-	padding: 7px 25px;
-}
-
-.puzzle__text {
-	font-weight: 500;
-	font-size: 1.2rem;
-	line-height: 1.3em;
-	text-transform: uppercase;
-	text-align: center;
-	margin-bottom: 15px;
-	user-select: none;
-}
-
-.puzzle__item {
+.puzzle__text-box {
 	position: absolute;
-	display: block;
-	z-index: 20;
-	width: $puzzle-radius;
-	height: $puzzle-radius;
-	top: - $border-width;
-	left: - $border-width;
-	transform-origin: right bottom;
-	@media only screen and (max-width: 900px) {
-		width: $mobile-puzzle-radius;
-		height: $mobile-puzzle-radius;
-		top: - $mobile-border-width;
-		left: - $mobile-border-width;
-	}
-}
-
-.puzzle__item_actived {
-	background: linear-gradient(180deg, #8e44ad $puzzle-radius - $seporator-height + 1, transparent $puzzle-radius - $seporator-height + 1);
-	& + .puzzle__separator {
-		.puzzle__connect {
-			background-color: #8e44ad;
-		}
-	}
-	.puzzle__link {
-		opacity: 1;
-	}
-	.puzzle__text {
-		color: #fff;
-	}
-	@media only screen and (max-width: 900px) {
-		background: linear-gradient(180deg, #8e44ad $mobile-puzzle-radius - $mobile-seporator-height + 1, transparent $mobile-puzzle-radius - $mobile-seporator-height + 1);
-	}
-}
-
-.puzzle__item_top_left {
-	transform: rotate(0) skewX(30deg);
-	.puzzle__inner {
-		transform: skewX(-30deg) rotate(0);
-		bottom: 70px;
-		right: 110px;
-	}
-}
-
-.puzzle__item_top {
-	transform: rotate(60deg) skewX(30deg);
-	.puzzle__inner {
-		transform: skewX(-30deg) rotate(-60deg);
-		bottom: 150px;
-		right: 50px;
-	}
-}
-
-.puzzle__item_top_right {
-	transform: rotate(120deg) skewX(30deg);
-	.puzzle__inner {
-		transform: skewX(-30deg) rotate(-120deg);
-		bottom: 205px;
-		right: 75px;
-	}
-}
-
-.puzzle__item_bottom_right {
-	transform: rotate(180deg) skewX(30deg);
-	.puzzle__inner {
-		transform: skewX(-30deg) rotate(-180deg);
-		bottom: 180px;
-		right: 145px;
-	}
-}
-
-.puzzle__item_bottom {
-	transform: rotate(240deg) skewX(30deg);
-	.puzzle__inner {
-		transform: skewX(-30deg) rotate(-240deg);
-		bottom: 80px;
-		right: 230px;
-	}
-}
-
-.puzzle__item_bottom_left {
-	transform: rotate(300deg) skewX(30deg);
-	.puzzle__inner {
-		transform: skewX(-30deg) rotate(-300deg);
-		bottom: 60px;
-		right: 180px;
-	}
+	right: 28%;
+	bottom: 28%;
+	transform: skewX(-30deg) rotate(0deg);
 }
 
 .puzzle__circle {
@@ -185,140 +103,53 @@ $mobile-circle-font-size-title: $circle-font-size-title * $mobile-font-multipler
 	background-color: #2a2a2b;
 	border-radius: 100%;
 	border: $border;
-	@media only screen and (max-width: 900px) {
-		top: $mobile-puzzle-radius - $mobile-circle-radius - $mobile-border-width;
-		left: $mobile-puzzle-radius - $mobile-circle-radius - $mobile-border-width;
-		width: $mobile-circle-diameter;
-		height: $mobile-circle-diameter;
-		border: $mobile-border;
-	}
 }
 
 .puzzle__separator {
 	position: absolute;
-	z-index: 100;
-	top: $puzzle-radius - $seporator-height - $border-width;
-	left: - $border-width;
-	height: $seporator-height;
-	width: $seporator-width;	
+	bottom: -1px;
+	left: 0;
+	height: 32px;
+	width: 100%;
 	overflow: hidden;
-	transform-origin: right bottom;
-	@media only screen and (max-width: 900px) {
-		top: $mobile-puzzle-radius - $mobile-seporator-height - $mobile-border-width;
-		left: - $mobile-border-width;
-		height: $mobile-seporator-height;
-		width: $mobile-seporator-width;
-	}
-}
-
-.puzzle__separator_actived {
-	background: linear-gradient(180deg, #8e44ad $border-width, transparent $border-width);
-	.puzzle__line_left, .puzzle__line_right {
-		background-color: #8e44ad;
-	}
-	@media only screen and (max-width: 900px) {
-		background: linear-gradient(180deg, #8e44ad $mobile-border-width, transparent $mobile-border-width);
-	}
-}
-
-.puzzle__separator_left {
-	transform: rotate(0deg);
-}
-
-.puzzle__separator_top_left {
-	transform: rotate(60deg);
-}
-
-.puzzle__separator_top_right {
-	transform: rotate(120deg);
-}
-
-.puzzle__separator_right {
-	transform: rotate(180deg);
-}
-
-.puzzle__separator_bottom_right {
-	transform: rotate(240deg);
-}
-
-.puzzle__separator_bottom_left {
-	transform: rotate(300deg);
+	transform: skewX(-30deg);
 }
 
 .puzzle__line {
 	position: absolute;
-	top: 0;
-	bottom: 0;
+	height: 100%;
 	border-bottom: $border;
-	@media only screen and (max-width: 900px) {
-		border-bottom: $mobile-border;
-	}
+	z-index: 5;
 }
 
 .puzzle__line_left {
-	width: ( $puzzle-radius - $circle-radius ) / 2 - $connect-radius + $border-width;
-	@media only screen and (max-width: 900px) {
-		width: ( $mobile-puzzle-radius - $mobile-circle-radius ) / 2 - $mobile-connect-radius + $mobile-border-width;
-	}
+	left: 0;
+	bottom: 0;
+	width: 76px;
+}
+
+.puzzle__line_top {
+	top: 0;
+	height: 7px;
+	left: 76px;
+	width: 28px;
+	border-bottom: none;
 }
 
 .puzzle__line_right {
 	right: 0;
-	width: ( $puzzle-radius - $circle-radius ) / 2 - $connect-radius + $border-width + $circle-radius;
-	@media only screen and (max-width: 900px) {
-		width: ( $mobile-puzzle-radius - $mobile-circle-radius ) / 2 - $mobile-connect-radius + $mobile-border-width + $mobile-circle-radius;
-	}
+	bottom: 0;
+	width: 226px;
 }
 
 .puzzle__connect {
 	position: absolute;
+	z-index: 10;
+	bottom: 0;
+	left: 70px;
+	bottom: - $connect-radius / 2;
 	height: $connect-diameter;
 	width: $connect-diameter;
 	border: $border;
 	border-radius: 100%;
-	bottom: - $connect-radius / 2;
-	left: ( $puzzle-radius - $circle-radius ) / 2 - $connect-radius;
-	@media only screen and (max-width: 900px) {
-		height: $mobile-connect-diameter;
-		width: $mobile-connect-diameter;
-		left: ( $mobile-puzzle-radius - $mobile-circle-radius ) / 2 - $mobile-connect-radius;
-		border: $mobile-border;
-		bottom: - $mobile-connect-radius / 2;
-	}
-}
-
-.puzzle__title {
-	font-size: $circle-font-size-title;
-	font-family: $font-family-second;
-	font-weight: 500;
-	color: #fff;
-	line-height: 0.9em;
-	@media only screen and (max-width: 900px) {
-		font-size: $mobile-circle-font-size-title;
-	}
-}
-
-.puzzle__subtitle {
-	font-size: 20px;
-	font-family: $font-family-second;
-	font-weight: 300;
-	color: #fff;
-	line-height: 1em;
-	text-transform: uppercase;
-	letter-spacing: 11px;
-	margin-left: 5px;
-	@media only screen and (max-width: 900px) {
-		display: none;
-	}
-}
-
-.puzzle__choice {
-	font-size: 19px;
-	font-weight: 500;
-	color: $color-yellow;
-	line-height: 1em;
-	text-transform: uppercase;
-	@media only screen and (max-width: 900px) {
-		display: none;
-	}
 }

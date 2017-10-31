@@ -1,21 +1,21 @@
 window.onload = function() {
 	const imageSwapElements = document.getElementsByClassName("js-image-swap");
 	const accordionElements = document.getElementsByClassName("js-accordion");
-	const puzzleElements = document.getElementsByClassName("js-puzzle-item");
-	const puzzleLineElements = document.getElementsByClassName("js-puzzle-line");
-	const puzzleConnectElements = document.getElementsByClassName("js-puzzle-connect");
+	const puzzleInnerElements = document.getElementsByClassName("puzzle__inner");
+	const puzzleLineElements = document.getElementsByClassName("puzzle__line");
+	const puzzleConnectElements = document.getElementsByClassName("puzzle__connect");
 	const dropdownTogglerElements = document.getElementsByClassName("js-dropdown-toggler");
 	const dropdownSublistElements = document.getElementsByClassName("navbar__item_top_multilevel");
 
 	setElementAction('onmouseenter', imageSwapElements, swapImage);
 	setElementAction('onmouseleave', imageSwapElements, swapImage);
 	setElementAction('onclick', accordionElements, toggleAccordion);
-	setElementAction('onmouseenter', puzzleElements, activateSeporatorHandler);
-	setElementAction('onmouseleave', puzzleElements, activateSeporatorHandler);
-	setElementAction('onmouseenter', puzzleLineElements, activatePuzzleByLine);
-	setElementAction('onmouseleave', puzzleLineElements, activatePuzzleByLine);
-	setElementAction('onmouseenter', puzzleConnectElements, activatePuzzleByConnect);
-	setElementAction('onmouseleave', puzzleConnectElements, activatePuzzleByConnect);
+	setElementAction('onmouseenter', puzzleInnerElements, activatePuzzleItem);
+	setElementAction('onmouseleave', puzzleInnerElements, activatePuzzleItem);
+	setElementAction('onmouseenter', puzzleLineElements, activatePuzzleItem);
+	setElementAction('onmouseleave', puzzleLineElements, activatePuzzleItem);
+	setElementAction('onmouseenter', puzzleConnectElements, activatePrevPuzzleItem);
+	setElementAction('onmouseleave', puzzleConnectElements, activatePrevPuzzleItem);
 	setElementAction('onclick', dropdownTogglerElements, navbarToggle);
 	setElementAction('onclick', dropdownSublistElements, dropdownSublist);
 }
@@ -84,80 +84,6 @@ function toggleAccordion(e) {
 	parentNode.classList.toggle('accordion__item_actived');
 }
 
-function activateSeporatorHandler (e) {
-	let el = e.target;
-
-	if (e.type == 'mouseleave') {
-		el.classList.remove('puzzle__item_actived');
-		deactivateSeparator (el);
-	} else {
-		el.classList.add('puzzle__item_actived');
-		activateSeporator (el);
-	}
-}
-
-function activateSeporator (el) {
-	let parent = el.parentElement;
-	let sibling = el.previousElementSibling;
-
-	if (!sibling) {
-		let seporators = parent.getElementsByClassName('puzzle__separator');
-		sibling = seporators[seporators.length - 1];
-	}
-
-	sibling.classList.add('puzzle__separator_actived')
-}
-
-function deactivateSeparator (el) {
-	let parent = el.parentElement;
-	let sibling = el.previousElementSibling;
-
-	if (!sibling) {
-		let seporators = parent.getElementsByClassName('puzzle__separator');
-		sibling = seporators[seporators.length - 1];
-	}
-
-	sibling.classList.remove('puzzle__separator_actived')
-}
-
-function activatePuzzleByLine (e) {
-	let el = e.target;
-	let parent = el.parentElement;
-	let nextParentSibling = parent.nextElementSibling;
-
-	if (!nextParentSibling || !nextParentSibling.classList.contains('puzzle__item')) {
-		let allParentItemSiblings = parent.parentElement.getElementsByClassName('puzzle__item');
-		nextParentSibling = allParentItemSiblings[0];
-	}
-
-	if (e.type == 'mouseleave') {
-		parent.classList.remove('puzzle__separator_actived');
-		nextParentSibling.classList.remove('puzzle__item_actived');	
-	} else {
-		parent.classList.add('puzzle__separator_actived');
-		nextParentSibling.classList.add('puzzle__item_actived');
-	}
-}
-
-function activatePuzzleByConnect (e) {
-	let el = e.target;
-	let parent = el.parentElement;
-	let prevParentSibling = parent.previousElementSibling;
-
-	if (!prevParentSibling || !prevParentSibling.classList.contains('puzzle__item')) {
-		let allParentItemSiblings = parent.parentElement.getElementsByClassName('puzzle__item');
-		prevParentSibling = allParentItemSiblings[allParentItemSiblings.length - 1];
-	}
-
-	if (e.type == 'mouseleave') {
-		prevParentSibling.classList.remove('puzzle__item_actived');
-		deactivateSeparator (prevParentSibling);
-	} else {
-		prevParentSibling.classList.add('puzzle__item_actived');
-		activateSeporator (prevParentSibling);
-	}
-}
-
 function navbarToggle (e) {
 	let el = e.target;
 	let target;
@@ -177,5 +103,58 @@ function dropdownSublist (e) {
 
 	if (window.innerWidth < 901 ) {
 		sublist.classList.toggle('navbar__sublist_top_actived');
+	}
+}
+
+function activatePuzzleItem (e) {
+	let el = e.target;
+	let parent = el.parentElement;
+
+	while (!parent.classList.contains('puzzle__item')) {
+		parent = parent.parentElement;
+		if (parent instanceof HTMLDocument) {
+			return;
+		}
+	}
+
+	let nextItem = parent.nextElementSibling;
+
+	if (!nextItem.classList.contains('puzzle__item')) {
+		nextItem = parent.parentElement.children[0];
+	}
+
+	if (e.type == 'mouseenter') {
+		parent.classList.add('puzzle__item_actived');
+		nextItem.classList.add('puzzle__item_actived_connect');
+	} else {
+		parent.classList.remove('puzzle__item_actived');
+		nextItem.classList.remove('puzzle__item_actived_connect')
+	}
+}
+
+function activatePrevPuzzleItem (e) {
+	let el = e.target;
+	let parent = el.parentElement;
+
+	while (!parent.classList.contains('puzzle__item')) {
+		parent = parent.parentElement;
+		if (parent instanceof HTMLDocument) {
+			return;
+		}
+	}
+
+	let prevItem = parent.previousElementSibling;
+
+	if (!prevItem || !prevItem.classList.contains('puzzle__item')) {
+		let allItems = parent.parentElement.getElementsByClassName('puzzle__item');
+		prevItem = allItems[allItems.length - 1];
+	}
+
+	if (e.type == 'mouseenter') {
+		parent.classList.add('puzzle__item_actived_connect');
+		prevItem.classList.add('puzzle__item_actived');
+	} else {
+		parent.classList.remove('puzzle__item_actived_connect')
+		prevItem.classList.remove('puzzle__item_actived');
 	}
 }
