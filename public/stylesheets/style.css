@@ -1607,6 +1607,9 @@ input {
           bottom: 21%; } }
     .puzzle__item:nth-of-type(1) .puzzle__text {
       transform: translateY(20px); }
+      @media only screen and (max-width: 900px) {
+        .puzzle__item:nth-of-type(1) .puzzle__text {
+          transform: translateY(10px); } }
   .puzzle__item:nth-of-type(2) {
     transform: rotate(120deg) skewX(30deg); }
     .puzzle__item:nth-of-type(2) .puzzle__content {
@@ -1619,6 +1622,9 @@ input {
           bottom: 20%; } }
     .puzzle__item:nth-of-type(2) .puzzle__text {
       transform: translateY(20px); }
+      @media only screen and (max-width: 900px) {
+        .puzzle__item:nth-of-type(2) .puzzle__text {
+          transform: translateY(10px); } }
   .puzzle__item:nth-of-type(3) {
     transform: rotate(180deg) skewX(30deg); }
     .puzzle__item:nth-of-type(3) .puzzle__content {
@@ -1631,6 +1637,9 @@ input {
           bottom: 20%; } }
     .puzzle__item:nth-of-type(3) .puzzle__text {
       transform: translateY(20px); }
+      @media only screen and (max-width: 900px) {
+        .puzzle__item:nth-of-type(3) .puzzle__text {
+          transform: translateY(10px); } }
   .puzzle__item:nth-of-type(4) {
     transform: rotate(240deg) skewX(30deg); }
     .puzzle__item:nth-of-type(4) .puzzle__content {
@@ -1643,6 +1652,9 @@ input {
           bottom: 25%; } }
     .puzzle__item:nth-of-type(4) .puzzle__text {
       transform: translateY(20px); }
+      @media only screen and (max-width: 900px) {
+        .puzzle__item:nth-of-type(4) .puzzle__text {
+          transform: translateY(10px); } }
   .puzzle__item:nth-of-type(5) {
     transform: rotate(300deg) skewX(30deg); }
     .puzzle__item:nth-of-type(5) .puzzle__content {
@@ -1655,6 +1667,9 @@ input {
           bottom: 22%; } }
     .puzzle__item:nth-of-type(5) .puzzle__text {
       transform: translateY(20px); }
+      @media only screen and (max-width: 900px) {
+        .puzzle__item:nth-of-type(5) .puzzle__text {
+          transform: translateY(10px); } }
   .puzzle__item:nth-of-type(6) {
     transform: rotate(360deg) skewX(30deg); }
     .puzzle__item:nth-of-type(6) .puzzle__content {
@@ -1667,6 +1682,9 @@ input {
           bottom: 22%; } }
     .puzzle__item:nth-of-type(6) .puzzle__text {
       transform: translateY(20px); }
+      @media only screen and (max-width: 900px) {
+        .puzzle__item:nth-of-type(6) .puzzle__text {
+          transform: translateY(10px); } }
   @media only screen and (max-width: 900px) {
     .puzzle__item {
       top: -2.63636px;
@@ -1886,21 +1904,49 @@ input {
     .puzzle__circle-connect-box_white .puzzle__circle-connect:nth-of-type(1) {
       top: -26px;
       left: 124px; }
+      @media only screen and (max-width: 900px) {
+        .puzzle__circle-connect-box_white .puzzle__circle-connect:nth-of-type(1) {
+          top: -11.42424px;
+          left: 54.48485px; } }
     .puzzle__circle-connect-box_white .puzzle__circle-connect:nth-of-type(2) {
       top: 46px;
       right: -6px; }
+      @media only screen and (max-width: 900px) {
+        .puzzle__circle-connect-box_white .puzzle__circle-connect:nth-of-type(2) {
+          top: 20.21212px;
+          right: -2.63636px; } }
     .puzzle__circle-connect-box_white .puzzle__circle-connect:nth-of-type(3) {
       bottom: 46px;
       right: -6px; }
+      @media only screen and (max-width: 900px) {
+        .puzzle__circle-connect-box_white .puzzle__circle-connect:nth-of-type(3) {
+          bottom: 20.21212px;
+          right: -2.63636px; } }
     .puzzle__circle-connect-box_white .puzzle__circle-connect:nth-of-type(4) {
       bottom: -26px;
       left: 124px; }
+      @media only screen and (max-width: 900px) {
+        .puzzle__circle-connect-box_white .puzzle__circle-connect:nth-of-type(4) {
+          bottom: -11.42424px;
+          left: 54.48485px; } }
     .puzzle__circle-connect-box_white .puzzle__circle-connect:nth-of-type(5) {
       bottom: 46px;
       left: -6px; }
+      @media only screen and (max-width: 900px) {
+        .puzzle__circle-connect-box_white .puzzle__circle-connect:nth-of-type(5) {
+          bottom: 20.21212px;
+          left: -2.63636px; } }
     .puzzle__circle-connect-box_white .puzzle__circle-connect:nth-of-type(6) {
       top: 46px;
       left: -6px; }
+      @media only screen and (max-width: 900px) {
+        .puzzle__circle-connect-box_white .puzzle__circle-connect:nth-of-type(6) {
+          top: 20.21212px;
+          left: -2.63636px; } }
+    @media only screen and (max-width: 900px) {
+      .puzzle__circle-connect-box_white .puzzle__circle-connect {
+        width: 17.57576px;
+        height: 17.57576px; } }
 
 .puzzle__circle-connect-box_black {
   z-index: 9; }
@@ -1911,21 +1957,49 @@ input {
     .puzzle__circle-connect-box_black .puzzle__circle-connect:nth-of-type(1) {
       top: -20px;
       left: 130px; }
+      @media only screen and (max-width: 900px) {
+        .puzzle__circle-connect-box_black .puzzle__circle-connect:nth-of-type(1) {
+          top: -8.78788px;
+          left: 57.12121px; } }
     .puzzle__circle-connect-box_black .puzzle__circle-connect:nth-of-type(2) {
       top: 52px;
       right: 0; }
+      @media only screen and (max-width: 900px) {
+        .puzzle__circle-connect-box_black .puzzle__circle-connect:nth-of-type(2) {
+          top: 22.84848px;
+          right: 0; } }
     .puzzle__circle-connect-box_black .puzzle__circle-connect:nth-of-type(3) {
       bottom: 52px;
       right: 0; }
+      @media only screen and (max-width: 900px) {
+        .puzzle__circle-connect-box_black .puzzle__circle-connect:nth-of-type(3) {
+          bottom: 22.84848px;
+          right: 0; } }
     .puzzle__circle-connect-box_black .puzzle__circle-connect:nth-of-type(4) {
       bottom: -20px;
       left: 130px; }
+      @media only screen and (max-width: 900px) {
+        .puzzle__circle-connect-box_black .puzzle__circle-connect:nth-of-type(4) {
+          bottom: -8.78788px;
+          left: 57.12121px; } }
     .puzzle__circle-connect-box_black .puzzle__circle-connect:nth-of-type(5) {
       bottom: 52px;
       left: 0; }
+      @media only screen and (max-width: 900px) {
+        .puzzle__circle-connect-box_black .puzzle__circle-connect:nth-of-type(5) {
+          bottom: 22.84848px;
+          left: 0; } }
     .puzzle__circle-connect-box_black .puzzle__circle-connect:nth-of-type(6) {
       top: 52px;
       left: 0; }
+      @media only screen and (max-width: 900px) {
+        .puzzle__circle-connect-box_black .puzzle__circle-connect:nth-of-type(6) {
+          top: 22.84848px;
+          left: 0; } }
+    @media only screen and (max-width: 900px) {
+      .puzzle__circle-connect-box_black .puzzle__circle-connect {
+        width: 12.30303px;
+        height: 12.30303px; } }
 
 .puzzle__circle-connect {
   position: absolute;

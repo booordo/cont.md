@@ -34,9 +34,13 @@ $m-border: $m-border-width solid #fff;
 $m-puzzle-diameter: $puzzle-diameter * $m-multipler;
 $m-circle-diameter: $circle-diameter * $m-multipler; 
 $m-connect-diameter: $connect-diameter * $m-multipler;
+$m-circle-inner-diameter: $m-circle-diameter - $m-border-width * 2;
+$m-circle-connect-diameter: $m-connect-diameter - $m-border-width * 2;
 $m-puzzle-radius: $m-puzzle-diameter / 2;
 $m-circle-radius: $m-circle-diameter / 2;
 $m-connect-radius: $m-connect-diameter / 2;
+$m-circle-inner-radius: $m-circle-inner-diameter / 2;
+$m-circle-connect-radius: $m-circle-connect-diameter / 2;
 $m-seporator-height: $seporator-height * $m-multipler;
 $m-seporator-width: $seporator-width * $m-multipler;
 $m-circle-font-size-title: $circle-font-size-title * $m-font-multipler;
@@ -81,6 +85,9 @@ $m-line-right-width: ( $m-puzzle-radius - $m-circle-radius ) / 2 - $m-connect-ra
 		}
 		.puzzle__text {
 			transform: translateY(20px);
+			@media only screen and (max-width: 900px) {
+				transform: translateY(10px);
+			}
 		}
 	}
 	&:nth-of-type(2) {
@@ -96,6 +103,9 @@ $m-line-right-width: ( $m-puzzle-radius - $m-circle-radius ) / 2 - $m-connect-ra
 		}
 		.puzzle__text {
 			transform: translateY(20px);
+			@media only screen and (max-width: 900px) {
+				transform: translateY(10px);
+			}
 		}
 	}
 	&:nth-of-type(3) {
@@ -111,6 +121,9 @@ $m-line-right-width: ( $m-puzzle-radius - $m-circle-radius ) / 2 - $m-connect-ra
 		}
 		.puzzle__text {
 			transform: translateY(20px);
+			@media only screen and (max-width: 900px) {
+				transform: translateY(10px);
+			}
 		}
 	}
 	&:nth-of-type(4) {
@@ -126,6 +139,9 @@ $m-line-right-width: ( $m-puzzle-radius - $m-circle-radius ) / 2 - $m-connect-ra
 		}
 		.puzzle__text {
 			transform: translateY(20px);
+			@media only screen and (max-width: 900px) {
+				transform: translateY(10px);
+			}
 		}
 	}
 	&:nth-of-type(5) {
@@ -141,6 +157,9 @@ $m-line-right-width: ( $m-puzzle-radius - $m-circle-radius ) / 2 - $m-connect-ra
 		}
 		.puzzle__text {
 			transform: translateY(20px);
+			@media only screen and (max-width: 900px) {
+				transform: translateY(10px);
+			}
 		}
 	}
 	&:nth-of-type(6) {
@@ -156,6 +175,9 @@ $m-line-right-width: ( $m-puzzle-radius - $m-circle-radius ) / 2 - $m-connect-ra
 		}
 		.puzzle__text {
 			transform: translateY(20px);
+			@media only screen and (max-width: 900px) {
+				transform: translateY(10px);
+			}
 		}
 	}
 	@media only screen and (max-width: 900px) {
@@ -403,26 +425,54 @@ $m-line-right-width: ( $m-puzzle-radius - $m-circle-radius ) / 2 - $m-connect-ra
 		&:nth-of-type(1) {
 			top: - $connect-radius - $border-width;
 			left: $circle-inner-radius - $connect-radius;
+			@media only screen and (max-width: 900px) {
+				top: - $m-connect-radius - $m-border-width;
+				left: $m-circle-inner-radius - $m-connect-radius;
+			}
 		}
 		&:nth-of-type(2) {
 			top: $circle-inner-radius / 2 - $connect-radius - $border-width;
 			right: - $border-width;
+			@media only screen and (max-width: 900px) {
+				top: $m-circle-inner-radius / 2 - $m-connect-radius - $m-border-width;
+				right: - $m-border-width;
+			}
 		}
 		&:nth-of-type(3) {
 			bottom: $circle-inner-radius / 2 - $connect-radius - $border-width;
 			right: - $border-width;
+			@media only screen and (max-width: 900px) {
+				bottom: $m-circle-inner-radius / 2 - $m-connect-radius - $m-border-width;
+				right: - $m-border-width;
+			}
 		}
 		&:nth-of-type(4) {
 			bottom: - $connect-radius - $border-width;
 			left: $circle-inner-radius - $connect-radius;
+			@media only screen and (max-width: 900px) {
+				bottom: - $m-connect-radius - $m-border-width;
+				left: $m-circle-inner-radius - $m-connect-radius;
+			}
 		}
 		&:nth-of-type(5) {
 			bottom: $circle-inner-radius / 2 - $connect-radius - $border-width;
 			left: - $border-width;
+			@media only screen and (max-width: 900px) {
+				bottom: $m-circle-inner-radius / 2 - $m-connect-radius - $m-border-width;
+				left: - $m-border-width;
+			}
 		}
 		&:nth-of-type(6) {
 			top: $circle-inner-radius / 2 - $connect-radius - $border-width;
 			left: - $border-width;
+			@media only screen and (max-width: 900px) {
+				top: $m-circle-inner-radius / 2 - $m-connect-radius - $m-border-width;
+				left: - $m-border-width;
+			}
+		}
+		@media only screen and (max-width: 900px) {
+			width: $m-connect-diameter;
+			height: $m-connect-diameter;
 		}
 	}
 }
@@ -436,26 +486,54 @@ $m-line-right-width: ( $m-puzzle-radius - $m-circle-radius ) / 2 - $m-connect-ra
 		&:nth-of-type(1) {
 			top: - $circle-connect-radius - $border-width;
 			left: $circle-inner-radius - $circle-connect-radius;
+			@media only screen and (max-width: 900px) {
+				top: - $m-circle-connect-radius - $m-border-width;
+				left: $m-circle-inner-radius - $m-circle-connect-radius;
+			}
 		}
 		&:nth-of-type(2) {
 			top: $circle-inner-radius / 2 - $circle-connect-radius - $border-width;
 			right: 0;
+			@media only screen and (max-width: 900px) {
+				top: $m-circle-inner-radius / 2 - $m-circle-connect-radius - $m-border-width;
+				right: 0;
+			}
 		}
 		&:nth-of-type(3) {
 			bottom: $circle-inner-radius / 2 - $circle-connect-radius - $border-width;
 			right: 0;
+			@media only screen and (max-width: 900px) {
+				bottom: $m-circle-inner-radius / 2 - $m-circle-connect-radius - $m-border-width;
+				right: 0;
+			}
 		}
 		&:nth-of-type(4) {
 			bottom: - $circle-connect-radius - $border-width;
 			left: $circle-inner-radius - $circle-connect-radius;
+			@media only screen and (max-width: 900px) {
+				bottom: - $m-circle-connect-radius - $m-border-width;
+				left: $m-circle-inner-radius - $m-circle-connect-radius;
+			}
 		}
 		&:nth-of-type(5) {
 			bottom: $circle-inner-radius / 2 - $circle-connect-radius - $border-width;
 			left: 0;
+			@media only screen and (max-width: 900px) {
+				bottom: $m-circle-inner-radius / 2 - $m-circle-connect-radius - $m-border-width;
+				left: 0;
+			}
 		}
 		&:nth-of-type(6) {
 			top: $circle-inner-radius / 2 - $circle-connect-radius - $border-width;
 			left: 0;
+			@media only screen and (max-width: 900px) {
+				top: $m-circle-inner-radius / 2 - $m-circle-connect-radius - $m-border-width;
+				left: 0;
+			}
+		}
+		@media only screen and (max-width: 900px) {
+			width: $m-circle-connect-diameter;
+			height: $m-circle-connect-diameter;
 		}
 	}
 }
