@@ -692,6 +692,11 @@ input {
   background-repeat: no-repeat;
   background-size: cover; }
 
+@media only screen and (max-width: 900px) {
+  .section {
+    padding-top: 50px;
+    padding-bottom: 50px; } }
+
 .container__header {
   padding-bottom: 25px; }
 
@@ -860,6 +865,19 @@ input {
 .title__accent {
   font-weight: 500; }
 
+@media only screen and (max-width: 900px) {
+  .title_size_xs {
+    font-size: 1.533333333333333rem;
+    padding-bottom: 15px; }
+  .title_size_sm {
+    font-size: 1.666666666666667rem; }
+  .title_size_md {
+    font-size: 2.066666666666667rem; }
+  .title_size_lg {
+    font-size: 2rem; }
+  .title_size_xl {
+    font-size: 3.666666666666667rem; } }
+
 .subtitle {
   display: block;
   font-family: "FiraSans", "Arial", sans-serif;
@@ -882,6 +900,12 @@ input {
 
 .subtitle_color_black {
   color: #313132; }
+
+@media only screen and (max-width: 900px) {
+  .subtitle {
+    font-size: 1.2rem;
+    padding-top: 15px;
+    padding-bottom: 0; } }
 
 .thumbnails {
   display: flex;
@@ -2278,3 +2302,7 @@ input {
   float: right;
   margin-left: 15px;
   margin-bottom: 15px; }
+
+@media only screen and (max-width: 900px) {
+  .mobile_hide {
+    display: none !important; } }

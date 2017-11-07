@@ -58,3 +58,26 @@
 .title__accent {
   font-weight: 500;
 }
+
+@media only screen and (max-width: 900px) {
+  .title_size_xs {
+    font-size: 1.533333333333333rem;
+    padding-bottom: 15px;
+  }
+
+  .title_size_sm {
+    font-size: 1.666666666666667rem;
+  }
+
+  .title_size_md {
+    font-size: 2.066666666666667rem;
+  }
+
+  .title_size_lg {
+    font-size: 2rem;
+  }
+
+  .title_size_xl {
+    font-size: 3.666666666666667rem;
+  }
+}
