@@ -35,3 +35,26 @@
 	width: calc(50% - 10px);
 	margin-top: 20px;
 }
+
+@media only screen and (max-width: 900px) {
+	.feedback {
+		width: 100%;
+		padding: 50px 25px;
+	}
+
+	.feedback__group {
+		flex-direction: column;
+	}
+
+	.feedback__captcha {
+		width: 100%;
+	}
+
+	.feedback__submit {
+		width: 100%;
+	}
+
+	.feedback__input_size_s {
+		width: 100%;
+	}
+}

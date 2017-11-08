@@ -85,3 +85,9 @@
 .grid__col_12 {
   width: 100%;
 }
+
+@media only screen and (max-width: 900px) {
+  .grid__col_m_12 {
+    width: 100%;
+  }
+}

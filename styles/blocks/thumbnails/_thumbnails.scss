@@ -2,6 +2,11 @@
   @include flex(row, space-around);
   padding-top: 50px;
   padding-bottom: 50px;
+  @media only screen and (max-width: 900px) {
+  	flex-direction: column;
+  	padding-top: 25px;
+  	padding-bottom: 25px;
+  }
 }
 
 .thumbnails_theme_solutions {
@@ -65,6 +70,9 @@
 
 .thumbnails__item {
   @include flex(column, center, center);
+  @media only screen and (max-width: 900px) {
+  	padding-bottom: 40px;
+  }
 }
 
 .thumbnails__image {
@@ -75,6 +83,9 @@
   flex: 1 0 210px;
   padding-bottom: 45px;
   @include flex(row, center, center);
+  @media only screen and (max-width: 900px) {
+  	padding-bottom: 15px;
+  }
 }
 
 .thumbnails__text {

@@ -8,8 +8,8 @@ block content
 	+b.section._no-padding
 		+b.grid.inner
 			+e.row._justify_sb
-				+e.col._8
-					+b.H2.title._size_md Управление финансами
+				+e.col._8._m_12
+					+b.H2.title._size_md.mobile_hide Управление финансами
 					+b.news-list
 						each item in news
 							+e.A.item(href= item.link)
@@ -24,7 +24,7 @@ block content
 						+e.SPAN.space ...
 						+e.A.controls.__page(href= "#") 25
 						+e.A.controls.__arrow_right(href= "#") &raquo;
-				+e.col._4
+				+e.col._4.mobile_hide
 					+b.H2.title._size_md Категории статей
 					+b.news-category
 						each item in news_category

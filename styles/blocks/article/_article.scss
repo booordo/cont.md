@@ -25,3 +25,21 @@
 	line-height: 1.470588235294118em;
 	margin-bottom: 30px;
 }
+
+.article__image {
+	display: none;
+	margin: 0 auto;
+	max-width: 90%;
+	height: auto;
+	padding-bottom: 40px;
+}
+
+@media only screen and (max-width: 900px) {
+	.article__title {
+		text-align: center;
+	}
+	
+	.article__image {
+		display: block;
+	}
+}

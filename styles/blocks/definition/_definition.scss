@@ -32,3 +32,13 @@
 		text-decoration: underline;
 	}	
 }
+
+@media only screen and (max-width: 900px) {
+	.definition {
+		flex-direction: column;
+	}
+	.definition__left {
+		width: 100%;
+		margin-bottom: 10px;
+	}	
+}

@@ -33,3 +33,19 @@
 	margin-left: 15px;
 	margin-bottom: 15px;
 }
+
+@media only screen and (max-width: 900px) {
+	.news-detail__image {
+		display: block;
+		float: none;
+		margin: 0 auto 25px;
+		width: 100%;
+		height: auto;
+	}
+	.news-detail__date {
+		display: block;
+		width: 110px;
+		margin: 0 auto 25px;
+		text-align: center;
+	}	
+}
