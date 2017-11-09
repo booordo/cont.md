@@ -1,4 +1,10 @@
+var YTPlayer;
+
 window.onload = function() {
+	setHandlers();
+}
+
+function setHandlers () {
 	const imageSwapElements = document.getElementsByClassName("js-image-swap");
 	const accordionElements = document.getElementsByClassName("js-accordion");
 	const puzzleInnerElements = document.getElementsByClassName("puzzle__inner");
@@ -6,6 +12,8 @@ window.onload = function() {
 	const puzzleConnectElements = document.getElementsByClassName("puzzle__connect");
 	const dropdownTogglerElements = document.getElementsByClassName("js-dropdown-toggler");
 	const dropdownSublistElements = document.getElementsByClassName("navbar__item_top_multilevel");
+	const videoLinkElements = document.getElementsByClassName("js-video-open");
+	const videoModal = document.getElementById("videoModal");
 
 	setElementAction('onmouseenter', imageSwapElements, swapImage);
 	setElementAction('onmouseleave', imageSwapElements, swapImage);
@@ -14,13 +22,15 @@ window.onload = function() {
 	setElementAction('onmouseleave', puzzleInnerElements, activatePuzzleItem);
 	setElementAction('onmouseenter', puzzleLineElements, activatePuzzleItem);
 	setElementAction('onmouseleave', puzzleLineElements, activatePuzzleItem);
-	setElementAction('onmouseenter', puzzleConnectElements, activatePrevPuzzleItem);
-	setElementAction('onmouseleave', puzzleConnectElements, activatePrevPuzzleItem);
-	setElementAction('onclick', dropdownTogglerElements, navbarToggle);
+	setElementAction('onmouseenter', puzzleConnectElements, activatePuzzleItemConnect);
+	setElementAction('onmouseleave', puzzleConnectElements, activatePuzzleItemConnect);
+	setElementAction('onclick', dropdownTogglerElements, toggleNavbar);
 	setElementAction('onclick', dropdownSublistElements, dropdownSublist);
+	setElementAction('onclick', videoLinkElements, openVideoModal);
+	setElementAction('onclick', videoModal, closeVideoModal);
 }
 
-function setElementAction(action, el, fn) {
+function setElementAction (action, el, fn) {
 	if (el instanceof HTMLCollection) {
 		switch (action) {
 			case 'onmouseenter':
@@ -58,7 +68,7 @@ function setElementAction(action, el, fn) {
 	}
 }
 
-function swapImage(e) {
+function swapImage (e) {
 	let elem = e.target;
 	let target = elem.getElementsByClassName('js-image-swap-target')[0];
 
@@ -75,7 +85,7 @@ function swapImage(e) {
 	elem.setAttribute('data-src', oldSrc)
 }
 
-function toggleAccordion(e) {
+function toggleAccordion (e) {
 	let el = e.target;
 	let parentNode = el.parentNode;
 
@@ -84,16 +94,18 @@ function toggleAccordion(e) {
 	parentNode.classList.toggle('accordion__item_actived');
 }
 
-function navbarToggle (e) {
+function toggleNavbar (e) {
 	let el = e.target;
 	let target;
 
 	if (el.classList.contains('js-dropdown-toggler')) {
 		target = document.getElementById(el.attributes['data-target'].value);
 	} else {
-		target = document.getElementById(el.parentElement.attributes['data-target'].value);
+		el = el.parentElement;
+		target = document.getElementById(el.attributes['data-target'].value);
 	}
 	
+	el.classList.toggle('navbar-toggler_actived');
 	target.classList.toggle('header__navbar_actived');
 }
 
@@ -132,7 +144,7 @@ function activatePuzzleItem (e) {
 	}
 }
 
-function activatePrevPuzzleItem (e) {
+function activatePuzzleItemConnect (e) {
 	let el = e.target;
 	let parent = el.parentElement;
 
@@ -157,4 +169,55 @@ function activatePrevPuzzleItem (e) {
 		parent.classList.remove('puzzle__item_actived_connect')
 		prevItem.classList.remove('puzzle__item_actived');
 	}
+}
+
+function enableScrolling () {
+	let body = document.getElementsByTagName('body')[0];
+
+	if (!body) return;
+
+	body.style.overflow = '';
+}
+
+function disableScrolling () {
+	let body = document.getElementsByTagName('body')[0];
+
+	if (!body) return;
+
+	body.style.overflow = 'hidden';
+}
+
+function openVideoModal (e) {
+	let el = e.target;
+	let videoId = el.getAttribute('data-target');
+	let videoModal = document.getElementById('videoModal');
+
+	e.preventDefault();
+	
+	if (!videoModal || !YTPlayer) return;
+
+	disableScrolling();
+
+	videoModal.classList.add('video_actived');
+
+	YTPlayer.loadVideoById(videoId);
+	YTPlayer.playVideo();
+}
+
+function closeVideoModal (e) {
+	let el = e.target;
+
+	if (!el || !el.classList.contains('video')) return;
+	
+	enableScrolling();
+
+	el.classList.remove('video_actived');
+	YTPlayer.pauseVideo();
+}
+
+function onYouTubeIframeAPIReady () {
+	YTPlayer = new YT.Player('Youtube', {
+		height: 510,
+		width: 900
+	});
 }

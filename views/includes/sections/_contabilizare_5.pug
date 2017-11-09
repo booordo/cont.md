@@ -9,4 +9,7 @@
             +e.item
               +e.image-box
                 +e.IMG.image(src=item.img)
-              +e.A.button.button._theme_3d-reverse._size_m(href="#")= item.text
+              if item.video
+                +e.A.button.button._theme_3d-reverse._size_m.js-video-open(href="#" data-target=item.video)= item.text
+              else
+                +e.A.button.button._theme_3d-reverse._size_m(href="#")= item.text  

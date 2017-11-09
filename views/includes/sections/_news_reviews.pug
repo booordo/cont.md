@@ -7,22 +7,22 @@
             +b.H2.title._weight_light <span class="title__accent">Наши</span> новости
             +e.A.link._color_black(href="#") Все новости
           +e.body
-            +b.card_size_m._theme_light
-              +e.label= news[0].date
+            +b.A.card_size_m._theme_light(href= news[0].link)
+              +e.DIV.label= news[0].date
               +e.IMG.image_size_m(src= news[0].img)
-              +e.A.link_size_m(href= news[0].link)= news[0].text
+              +e.DIV.link_size_m= news[0].text
             +b.grid
               +e.row
                 +e.col._6
-                  +b.card_size_s._theme_light
+                  +b.A.card_size_s._theme_light(href= news[1].link)
                     +e.label= news[1].date
                     +e.IMG.image_size_s(src= news[1].img)
-                    +e.A.link_size_s(href= news[1].link)= news[1].text
+                    +e.DIV.link_size_s= news[1].text
                 +e.col._6
-                  +b.card_size_s._theme_light
-                    +e.label= news[2].date
+                  +b.A.card_size_s._theme_light(href= news[2].link)
+                    +e.DIV.label= news[2].date
                     +e.IMG.image_size_s(src= news[2].img)
-                    +e.A.link_size_s(href= news[2].link)= news[2].text
+                    +e.DIV.link_size_s= news[2].text
       +e.col._5
         +b.container
           +e.header
