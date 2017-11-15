@@ -2156,6 +2156,9 @@ input {
   margin-bottom: 2px;
   position: relative; }
 
+.news-category__item_actived .news-category__link {
+  background-color: #3498db; }
+
 .news-category__link {
   display: block;
   padding: 15px;

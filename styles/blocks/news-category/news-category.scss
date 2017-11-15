@@ -8,6 +8,12 @@
 	position: relative;
 }
 
+.news-category__item_actived {
+	.news-category__link {
+		background-color: $color-light-blue;
+	}
+}
+
 .news-category__link {
 	display: block;
 	padding: 15px;
