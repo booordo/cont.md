@@ -12,8 +12,8 @@ gulp.task('default', ['browser-sync', 'sass'], () => {
 gulp.task('browser-sync', ['nodemon'], function() {
 	browserSync.init(null, {
 		proxy: "http://localhost:3000",
-        files: ["public/**/*.*"],        
-        port: 4000
+		files: ["public/**/*.*"],
+		port: 4000
 	});
 });
 
@@ -30,7 +30,7 @@ gulp.task('nodemon', function (cb) {
 gulp.task('sass', () => {
 	return gulp.src('./styles/style.scss')
 	.pipe(wait(300))
-    .pipe(gulpSass())
-    .pipe(gulp.dest('./public/stylesheets/'))
-    .pipe(browserSync.stream());
+	.pipe(gulpSass())
+	.pipe(gulp.dest('./public/stylesheets/'))
+	.pipe(browserSync.stream());
 });

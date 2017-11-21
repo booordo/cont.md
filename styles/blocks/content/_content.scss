@@ -1,5 +1,6 @@
 .content {
-	flex: 1;
+	flex-grow: 1;
+	flex-shrink: 0;
 }
 
 @media only screen and (max-width: 900px) {
