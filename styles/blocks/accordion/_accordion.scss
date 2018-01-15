@@ -1,8 +1,10 @@
 .accordion {
-	background-color: #fff;
+	padding-top: 50px;
+	padding-bottom: 50px;
 }
 
 .accordion__item {
+	background-color: #fff;
 	border: 1px solid #ccc;
 	border-top: none;
 	&:first-of-type {

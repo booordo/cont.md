@@ -76,7 +76,7 @@
     width: 10px;
     height: 10px;
     margin-right: 15px;
-    background-image: url('../images/right_angle_full.png');
+    background-image: url('../images/new_cont/right_angle_full.png');
     background-repeat: no-repeat;
     background-position: center center;
   }
@@ -84,10 +84,12 @@
 
 @media only screen and (max-width: 900px) {
   .navbar_top {
-    flex-direction: column;
+    display: block;
     background-color: #343434;
     margin-left: -15px;
     margin-right: -15px;
+    max-height: calc(100vh - 100px);
+    overflow-y: scroll;
   }
   .navbar__item_top {
     border-bottom: 1px solid #2a2a2a;
@@ -98,7 +100,7 @@
     background-color: #444446;
     border-top: 1px solid #2a2a2a;
     white-space: normal;
-    text-align: center
+    text-align: center;
   }
   .navbar__sublink_top {
     border-bottom: 1px solid #2a2a2a;

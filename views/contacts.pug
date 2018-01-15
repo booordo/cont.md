@@ -52,12 +52,20 @@ block content
 		+b.inner
 			+b.FORM.feedback(method="POST")
 				+e.group
-					+e.INPUT.input_size_s(type="text" placeholder="Ваше имя" name="name")
-					+e.INPUT.input_size_s(type="text" placeholder="Телефон" name="phone")
-				+e.INPUT.input_size_l(type="text" placeholder="E-mail" name="email")
+					+e.INPUT.input_size_s(type="text" placeholder="Ваше имя" name="name" required)
+					+e.INPUT.input_size_s(type="tel" placeholder="Телефон" name="phone" required)
+				+e.INPUT.input_size_l(type="email" placeholder="E-mail" name="email" required)
 				+e.INPUT.input_size_l(type="text" placeholder="Название вашей организации" name="organization")
-				+e.INPUT.input_size_l(type="text" placeholder="Задайте ваш вопрос" name="message")
+				+e.INPUT.input_size_l(type="text" placeholder="Задайте ваш вопрос" name="message" required)
 				+e.group
 					+e.captcha 
 						+b.g-recaptcha(data-sitekey="6Lek5icUAAAAAJwQWt8fcK1wbxzb_UqvMK7zpTLL")
 					+e.INPUT.submit.button._theme_3d(type="submit" name="submit" value="Отправить")
+	+b.section_theme_map._size_s
+		+b.inner
+			+b.FORM.feedback_success(method="POST")
+				+e.SPAN.message Сообщение успешно отправлено
+	+b.section_theme_map._size_s
+		+b.inner
+			+b.FORM.feedback_error(method="POST")
+				+e.SPAN.message Подозрение на спам
