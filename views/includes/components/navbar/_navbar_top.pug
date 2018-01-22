@@ -9,6 +9,7 @@
 		- let hasSubitems = !!item.subitems;
 		- classList = classList + ( itemActived ? '_top_actived ' : '' );
 		- classList = classList + ( hasSubitems ? '_top_multilevel' : '' );
+		- classList = classList + ( item.download ? '_top_download' : '' );
 		+e.LI.item_top(class= classList)
 			+e.A.link_top(href= item.link)= item.title
 			if hasSubitems

@@ -1,5 +1,5 @@
 .price-category {
-	
+	position: relative;
 }
 
 .price-category_actived {
@@ -8,7 +8,14 @@
 	top: 10px;
 }
 
+.price-category_actived-bottom {
+	position: absolute;
+	width: 350px;
+	bottom: 50px;
+}
+
 .price-category__item {
+	position: relative;
 	margin-bottom: 3px;	
 }
 
@@ -25,4 +32,9 @@
 		background-color: #3498db;
 		border-left-color: #2980b9;
 	} 
+}
+
+.price-category__link_actived {
+	background-color: #3498db;
+	border-left-color: #2980b9;
 }

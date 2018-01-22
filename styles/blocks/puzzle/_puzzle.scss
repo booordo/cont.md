@@ -112,11 +112,11 @@ $m-line-right-width: ( $m-puzzle-radius - $m-circle-radius ) / 2 - $m-connect-ra
 		transform: rotate($rotate-deg * 3) skewX($skew-deg);
 		.puzzle__content {
 			transform: skewX(- $skew-deg) rotate(- $rotate-deg * 3);
-			right: 23%;
+			right: 25%;
 			bottom: 25%;
 			@media only screen and (max-width: 900px) {
 				right: 20%;
-				bottom: 20%;
+				bottom: 25%;
 			}
 		}
 		.puzzle__text {
@@ -151,8 +151,8 @@ $m-line-right-width: ( $m-puzzle-radius - $m-circle-radius ) / 2 - $m-connect-ra
 			right: 25%;
 			bottom: 25%;
 			@media only screen and (max-width: 900px) {
-				right: 22%;
-				bottom: 22%;
+				right: 25%;
+				bottom: 20%;
 			}
 		}
 		.puzzle__text {
@@ -200,6 +200,17 @@ $m-line-right-width: ( $m-puzzle-radius - $m-circle-radius ) / 2 - $m-connect-ra
 	}
 	.puzzle__text {
 		transform: translateY(0) !important;
+	}
+}
+
+@media only screen and (max-width: 900px) {
+	.puzzle__item_actived {
+		.puzzle__link {
+			transform: scale(0);
+		}
+		.puzzle__text {
+			transform: translateY(10px) !important;
+		}
 	}
 }
 
@@ -377,6 +388,7 @@ $m-line-right-width: ( $m-puzzle-radius - $m-circle-radius ) / 2 - $m-connect-ra
 	font-weight: 500;
 	color: #f1c40f;
 	text-transform: uppercase;
+	user-select: none;
 	@media only screen and (max-width: 900px) {
 		font-size: 8px;
 	}
@@ -389,6 +401,7 @@ $m-line-right-width: ( $m-puzzle-radius - $m-circle-radius ) / 2 - $m-connect-ra
 	line-height: 0.9em;
 	color: #fff;
 	text-transform: uppercase;
+	user-select: none;
 	@media only screen and (max-width: 900px) {
 		font-size: 50px;
 	}
@@ -401,6 +414,7 @@ $m-line-right-width: ( $m-puzzle-radius - $m-circle-radius ) / 2 - $m-connect-ra
 	text-transform: uppercase;
 	color: #fff;
 	margin-bottom: 10px;
+	user-select: none;
 	@media only screen and (max-width: 900px) {
 		font-size: 9px;
 		letter-spacing: 5px;

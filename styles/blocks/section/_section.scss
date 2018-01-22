@@ -83,9 +83,10 @@
 }
 
 .section_theme_map {
-  background-image: url('../images/new_cont/bg_contacts.jpg');
+  background-image: url('../images/new_cont/bg_contacts.png');
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: auto 100%;
+  background-position: 100% 0;
 }
 
 @media only screen and (max-width: 900px) {

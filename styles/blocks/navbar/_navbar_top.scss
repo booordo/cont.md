@@ -21,6 +21,10 @@
   background-color: $color-light-blue;
 }
 
+.navbar__item_top_download {
+  display: none;
+}
+
 .navbar__item_top_multilevel {
   .navbar__link_top {
     pointer-events: none;
@@ -93,6 +97,25 @@
   }
   .navbar__item_top {
     border-bottom: 1px solid #2a2a2a;
+  }
+  .navbar__item_top_download {
+    background-color: #f1c40f;
+    display: block;
+    .navbar__link_top {
+      color: #313131;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      &:after {
+        content: '';
+        display: block;
+        background-image: url('../images/new_cont/download.png');
+        background-size: contain;
+        height: 23px;
+        width: 18px;
+        margin-left: 10px;
+      }
+    }
   }
   .navbar__sublist_top {
     padding: 0;

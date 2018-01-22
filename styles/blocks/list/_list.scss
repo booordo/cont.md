@@ -1,7 +1,7 @@
 .list {
 	display: block;
 	margin: 0;
-	padding: 50px 0 50px 18px;
+	padding: 15px 0 15px 18px;
 	list-style-type: square;
 }
 
@@ -9,4 +9,12 @@
 	font-size: 18px;
 	font-weight: 400;
 	margin-bottom: 7px;
+}
+
+.list__link {
+	color: #4ea5e0;
+	text-decoration: none;
+	&:hover {
+		text-decoration: underline;
+	}
 }
