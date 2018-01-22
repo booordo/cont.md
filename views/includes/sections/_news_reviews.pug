@@ -29,11 +29,12 @@
             +b.H2.title._weight_light <span class="title__accent">Отзывы</span> наших клиентов
             +e.A.link._color_black(href="#") Другие отзывы
           +e.body
-            each item in reviews
-              +b.reviews
-                +e.header
-                  +e.H3.title= item.title
-                  +e.author= item.author
-                +e.footer
-                  +e.SPAN.text Смотрите отзыв пройдя по ссылке: 
-                  +e.A.link(href= item.link)= item.link
+            +b.reviews
+              each item in reviews
+                +e.item._preview
+                  +e.header
+                    +e.H3.title= item.title
+                    +e.author= item.author
+                  +e.footer
+                    +e.SPAN.text Смотрите отзыв пройдя по ссылке: 
+                    +e.A.link(href= item.link)= item.link

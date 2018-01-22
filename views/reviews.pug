@@ -1,7 +1,20 @@
 extends layout
 
 block content
-	+b.section._size_s
+	+b.section._size_xs
 		+b.inner
 			+b.title._size_xl Отзывы
 			include includes/components/breadcrumbs/_breadcrumbs
+	+b.section._no-padding
+		+b.inner
+			+b.container
+				+e.body
+					+b.reviews_grid
+						each item in reviews
+							+e.item
+								+e.header
+									+e.H3.title= item.title
+									+e.author= item.author
+								+e.footer
+									+e.SPAN.text Смотрите отзыв пройдя по ссылке: 
+									+e.A.link(href= item.link)= item.link
