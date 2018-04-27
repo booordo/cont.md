@@ -388,27 +388,27 @@ function getChar(e) {
     }
     var elements = [{
             title: ["Розничная", "торговля"],
-            link: "#"
+            link: "/erp/roznichnaya-torgovlya/"
         },
         {
             title: ["Управленческий", "учет"],
-            link: "#"
+            link: "/erp/upravlencheskiy-uchet/"
         },
         {
             title: ["Интернет", "торговля"],
-            link: "#"
+            link: "/erp/internet-torgovlya/"
         },
         {
             title: ["Управление", "продажами"],
-            link: "#"
+            link: "/erp/upravlenie-prodazhami/"
         },
         {
             title: ["Финансовый", "учет"],
-            link: "#"
+            link: "/erp/finansovyy-uchet/"
         },
         {
             title: ["Учет", "производства"],
-            link: "#"
+            link: "/erp/uchet-proizvodstva/"
         }
     ];
     var puzzle = new Puzzle(Snap("#puzzle"), 570, 400, elements);
