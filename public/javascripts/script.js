@@ -151,8 +151,8 @@ function getChar(e) {
     class Puzzle {
         constructor(context, cx, cy, elements) {
             this.context = context;
-            this.maxContextWidth = 1110;
-			this.contextWidth = 1110;
+            this.maxContextWidth = 1140;
+			this.contextWidth = 1140;
 			this.contextHeight = 800;
             this.cx = cx;
             this.cy = cy;
@@ -186,9 +186,9 @@ function getChar(e) {
         _updateSize() {
 			var clientWidth = document.body.clientWidth;
 			var k = (clientWidth - 30) / this.width;
-            var offsetX = -(this.contextWidth - clientWidth) / 2 - 15;
+            var offsetX = -(this.contextWidth - clientWidth) / 2;
 			offsetX = offsetX > 0 ? 0 : offsetX;
-			var offsetY = -(this.contextHeight - (this.contextHeight * k)) / 2 - 15;
+			var offsetY = -(this.contextHeight - (this.contextHeight * k)) / 2;
 			offsetY = offsetY > 0 ? 0 : offsetY;
             if (clientWidth < this.width) {
 				this.mainGroup.transform(`T ${offsetX}, ${offsetY} s${k}`)
@@ -406,5 +406,5 @@ function getChar(e) {
             link: "#"
         }
     ];
-    var puzzle = new Puzzle(Snap("#puzzle"), 555, 400, elements);
+    var puzzle = new Puzzle(Snap("#puzzle"), 570, 400, elements);
 })();
