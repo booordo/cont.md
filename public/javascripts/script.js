@@ -292,6 +292,9 @@ function getChar(e) {
                 group.add(text);
             });
             group.hover(this._sectorHoverInHandler, this._sectorHoverOutHandler, group, group);
+            group.click(function(e) {
+                document.location.href = element.link;
+            });
             return group;
         }
         _getArcPoints(radius, fromAngle, toAngle) {
@@ -336,7 +339,9 @@ function getChar(e) {
         }
 
         // EVENTS
-
+        _sectorOnClickHandler(e) {
+            location.href(e.element.link);
+        } 
         _sectorHoverInHandler(e) {
             var parent = this.parent();
             var elements = parent.children();
