@@ -1,0 +1,13 @@
+extends layout
+
+block content
+    +b.FORM.auth-form
+        +e.H1.title Регистрация
+        +e.INPUT.input(type="text" name="name" placeholder="Имя" required)
+        +e.INPUT.input(type="text" name="surname" placeholder="Фамилия" required)
+        +e.INPUT.input(type="email" name="email" placeholder="Электронный адрес" required)
+        +e.INPUT.input(type="text" name="login" placeholder="Логин" required)
+        +e.INPUT.input(type="password" name="password" placeholder="Пароль" required)
+        +e.BUTTON.submit(type="submit" name="action" value="login") Зарегистрироваться
+        +e.P.desc * Если у вас уже есть аккаунт, перейдите на страницу 
+            +e.A.link(href="./authorization") авторизации
