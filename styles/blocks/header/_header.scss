@@ -16,6 +16,10 @@
 	display: none;
 }
 
+.header__auth {
+	border-bottom: 1px solid #dddddd;
+}
+
 @media only screen and (max-width: 900px) {
 	.header {
 		position: fixed;

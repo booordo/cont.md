@@ -28,11 +28,19 @@
     margin-bottom: 15px;
     border: none;
     cursor: pointer;
-    background-color: #4CAF50;
+    background-color: $color-blue;
     transition: 0.2s;
     color: #fff;
     &:hover {
-        background-color: #43A047;
+        background-color: $color-light-blue;
+    }
+}
+
+.auth-form__link {
+    text-decoration: none;
+    color: $color-blue;
+    &:hover {
+        color: $color-light-blue;
     }
 }
 
