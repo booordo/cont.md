@@ -23,14 +23,21 @@
 
 .auth-form__select {
     position: relative;
-    padding: 15px;
-    margin-bottom: 15px;
     border: 1px solid #dddddd;
+    margin-bottom: 15px;
     i {
         position: absolute;
         right: 15px;
         top: 17px;
     }
+}
+
+.auth-form__selected {
+    padding: 15px;
+}
+
+.auth-form__selected_active + .auth-form__options {
+    display: block;
 }
 
 .auth-form__options {

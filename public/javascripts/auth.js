@@ -1,17 +1,22 @@
 (function() {
-    var selectElements = Array.prototype.slice.call(document.getElementsByClassName("auth-form__select"));
-    var optionElements = Array.prototype.slice.call(document.getElementsByClassName("auth-form__option"));
+    var inputElement = document.getElementById("personTypeInput");
+    var selectElement = document.getElementById("personTypeSelect");
+    var optionsElement = document.getElementById("personTypeOptions");
+    var optionElements = Array.prototype.slice.call(optionsElement.children);
 
-    selectElements.forEach(element => element.addEventListener("click", selectClickHandler));
+    selectElement.addEventListener("click", selectClickHandler);
     optionElements.forEach(element => element.addEventListener("click", optionClickHandler));
 
     function selectClickHandler(event) {
         element = event.target;
-        element.classList.toggle("auth-form__select_active");
+        if (element !== this) element = element.closest(".auth-form__selected");
+        element.classList.toggle("auth-form__selected_active");
     }
 
     function optionClickHandler(event) {
         element = event.target;
-        element.classList.toggle("auth-form__select_active");
+        inputElement.value = element.dataset.value;
+        selectElement.innerHTML = element.innerHTML;
+        selectElement.classList.toggle("auth-form__selected_active");
     }
 })()

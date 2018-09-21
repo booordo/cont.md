@@ -4,12 +4,12 @@ block content
     +b.FORM.auth-form
         +e.H1.title Регистрация
         +e.select
-            +e.selected Физическое лицо
+            +e.selected(id="personTypeSelect") Физическое лицо
+            +e.options(id="personTypeOptions")
+                +e.option(data-value="3") Физическое лицо
+                +e.option(data-value="4") Юридичское лицо
             +b.I.fas.fa-angle-down
-            +e.options
-                +e.option(value="3") Физическое лицо
-                +e.option(value="4") Юридичское лицо
-        +e.INPUT.input(type="hidden" name="person_type" value="")
+        +e.INPUT.input(type="hidden" name="person_type" value="3" id="personTypeInput")
         +e.INPUT.input(type="text" name="name" placeholder="Имя" required)
         +e.INPUT.input(type="text" name="surname" placeholder="Фамилия" required)
         +e.INPUT.input(type="email" name="email" placeholder="Электронный адрес" required)
