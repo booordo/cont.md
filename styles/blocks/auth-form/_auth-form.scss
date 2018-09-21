@@ -3,6 +3,7 @@
     max-width: 500px;
     padding: 25px;
     box-shadow: 0 0 15px 0 #dddddd;
+    background-color: #fff;
     font-size: 16px;
 }
 
@@ -18,6 +19,33 @@
     margin-bottom: 15px;
     padding: 15px;
     border: 1px solid #dddddd;
+}
+
+.auth-form__select {
+    position: relative;
+    padding: 15px;
+    margin-bottom: 15px;
+    border: 1px solid #dddddd;
+    i {
+        position: absolute;
+        right: 15px;
+        top: 17px;
+    }
+}
+
+.auth-form__options {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    border: 1px solid #dddddd;
+    width: calc(100% + 2px);
+    top: 48px;
+    left: -1px;
+}
+
+.auth-form__option {
+    padding: 15px;
+    border-bottom: 1px solid #dddddd;
 }
 
 .auth-form__submit {
