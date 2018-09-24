@@ -3,8 +3,10 @@ extends layout
 block content
     +b.FORM.auth-form
         +e.H1.title Авторизация
-        +e.INPUT.input(type="text" name="name" placeholder="Логин" required)
-        +e.INPUT.input(type="password" name="password" placeholder="Пароль" required)
+        +e.input-group
+            +e.LABEL.label(for="username") Логин
+            +e.INPUT.input(type="text" name="name" id="username" required)
+        +e.input-group
+            +e.LABEL.label(for="password") Пароль
+            +e.INPUT.input(type="password" name="password" id="password" required)
         +e.BUTTON.submit(type="submit" name="action" value="login") Войти
-        +e.P.desc * Если у вас еще нет аккаунта, вам необходимо 
-            +e.A.link(href="./registration") зарегистрироваться

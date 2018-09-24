@@ -3,18 +3,43 @@ extends layout
 block content
     +b.FORM.auth-form
         +e.H1.title Регистрация
-        +e.select
-            +e.selected(id="personTypeSelect") Физическое лицо
-            +e.options(id="personTypeOptions")
-                +e.option(data-value="3") Физическое лицо
-                +e.option(data-value="4") Юридичское лицо
-            +b.I.fas.fa-angle-down
-        +e.INPUT.input(type="hidden" name="person_type" value="3" id="personTypeInput")
-        +e.INPUT.input(type="text" name="name" placeholder="Имя" required)
-        +e.INPUT.input(type="text" name="surname" placeholder="Фамилия" required)
-        +e.INPUT.input(type="email" name="email" placeholder="Электронный адрес" required)
-        +e.INPUT.input(type="text" name="login" placeholder="Логин" required)
-        +e.INPUT.input(type="password" name="password" placeholder="Пароль" required)
+        +e.P.error Пользователь с таким именем уже существует в системе
+            br
+            .
+                Еще что-то
+            br
+            .
+                Еще что-то
+            br
+            .
+                Еще что-то
+        +e.input-group
+            +e.LABEL.label Тип организации
+            +e.radio-group
+                +e.INPUT.radio(type="radio" id="individual" name="person_type" value="3" checked)
+                +e.LABEL.radio-label(for="individual") Физическое лицо
+            +e.radio-group
+                +e.INPUT.radio(type="radio" id="juridical_with_tva" name="person_type" value="4")
+                +e.LABEL.radio-label(for="juridical_with_tva") Юридичeское лицо (плательщик НДС)
+            +e.radio-group
+                +e.INPUT.radio(type="radio" id="juridical_without_tva" name="person_type" value="5")
+                +e.LABEL.radio-label(for="juridical_without_tva") Юридичeское лицо (не плательщик НДС)
+        +e.input-group
+            +e.LABEL.label(for="name") Название организации
+            +e.INPUT.input(type="text" name="name" id="name" placeholder="" required)
+        +e.input-group
+            +e.LABEL.label(for="email") Электронный адрес
+            +e.INPUT.input(type="email" name="email" id="email" required)
+        +e.input-group
+            +e.LABEL.label(for="login") Логин
+            +e.INPUT.input._error(type="text" name="login" id="login" placeholder="" required)
+        +e.input-group
+            +e.LABEL.label(for="password") Пароль
+            +e.SPAN.rules Не менее 6-ти символов
+            +e.INPUT.input(type="password" name="password" id="password" placeholder="" required)
         +e.BUTTON.submit(type="submit" name="action" value="login") Зарегистрироваться
-        +e.P.desc * Если у вас уже есть аккаунт, перейдите на страницу 
-            +e.A.link(href="./authorization") авторизации
+        +e.P.desc Нажимая кнопку "Зарегистрироваться", я принимаю условия 
+            +e.A.link(href="#") пользовательского соглашения, 
+            .
+                а так же подтверждаю свое 
+            +e.A.link(href="#") согласие на обработку персональных данных.   
