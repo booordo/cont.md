@@ -2,7 +2,7 @@
     window.addEventListener("load", function () {
         var elements = document.querySelectorAll("input[type=tel]")
         elements.forEach(function (el) {
-            el.addEventListener("onkeypress", onKeyPress);
+            el.addEventListener("keypress", onKeyPress);
         });
     });
 
@@ -11,7 +11,7 @@
         var chr = getChar(e);
         if (chr == null) return;
         if ((chr < '0' || chr > '9') && (chr !== "+" && chr !== "(" && chr !== ")" && chr !== " ")) {
-            return false;
+            e.preventDefault();
         }
     }
     

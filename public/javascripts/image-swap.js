@@ -2,10 +2,10 @@
     window.addEventListener("load", function () {
         var elements = document.querySelectorAll(".js-image-swap");
         elements.forEach(function (el) {
-            el.addEventListener("onmouseenter", onMouseEnter);
+            el.addEventListener("mouseenter", onMouseEnter);
         });
         elements.forEach(function (el) {
-            el.addEventListener("onmouseleave", onMouseLeave);
+            el.addEventListener("mouseleave", onMouseLeave);
         });
     });
 

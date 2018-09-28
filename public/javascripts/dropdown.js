@@ -3,10 +3,10 @@
 		var tooglers = document.querySelectorAll(".js-dropdown-toggler");
 		var sublists = document.querySelectorAll(".navbar__item_top_multilevel");
 		tooglers.forEach(function (el) {
-			el.addEventListener("onclick", onTogglerClick);
+			el.addEventListener("click", onTogglerClick);
 		});
 		sublists.forEach(function (el) {
-			el.addEventListener("onclick", onSublistClick);
+			el.addEventListener("click", onSublistClick);
 		});
 	});
 
@@ -30,7 +30,7 @@
 
 	function onSublistClick(e) {
 		let el = e.target;
-		let sublist = el.getquerySelector('navbar__sublist_top');
+		let sublist = el.querySelector('.navbar__sublist_top');
 		if (window.innerWidth < 901) {
 			sublist.classList.toggle('navbar__sublist_top_actived');
 		}

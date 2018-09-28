@@ -1,9 +1,9 @@
 const gulp = require('gulp');
-const gulpSass = require('gulp-sass');
+const sass = require('gulp-sass');
+const sourcemaps = require('gulp-sourcemaps');
 const wait = require('gulp-wait');
 const browserSync = require('browser-sync');
 const nodemon = require('nodemon');
-const cssc = require('gulp-css-condense');
 const imagemin = require('gulp-imagemin');
 
 gulp.task('default', ['browser-sync', 'sass'], () => {
@@ -34,8 +34,9 @@ gulp.task('nodemon', function(cb) {
 gulp.task('sass', () => {
 	return gulp.src('./styles/style.scss')
 		.pipe(wait(300))
-		.pipe(gulpSass())
-		.pipe(cssc())
+		.pipe(sourcemaps.init())
+		.pipe(sass())
+		.pipe(sourcemaps.write('./public/maps'))
 		.pipe(gulp.dest('./public/stylesheets/'))
 		.pipe(browserSync.stream());
 });

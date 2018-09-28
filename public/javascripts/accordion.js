@@ -2,7 +2,7 @@
     window.addEventListener("load", function () {
         var elements = document.querySelectorAll(".js-accordion")
         elements.forEach(function (el) {
-            el.addEventListener("onclick", onClick);
+            el.addEventListener("click", onClick);
         });
     });
 

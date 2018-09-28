@@ -24,6 +24,7 @@
     "gulp-css-condense": "^1.1.2",
     "gulp-imagemin": "^4.1.0",
     "gulp-sass": "^3.1.0",
+    "gulp-sourcemaps": "^2.6.4",
     "gulp-wait": "0.0.2",
     "nodemon": "^1.12.1"
   }
