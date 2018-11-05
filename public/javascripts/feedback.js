@@ -1,6 +1,7 @@
 (function () {
     window.addEventListener("load", function () {
         var elements = document.querySelectorAll("input[type=tel]")
+        elements = Array.prototype.slice.call(elements)
         elements.forEach(function (el) {
             el.addEventListener("keypress", onKeyPress);
         });

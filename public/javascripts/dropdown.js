@@ -2,6 +2,8 @@
 	window.addEventListener("load", function () {
 		var tooglers = document.querySelectorAll(".js-dropdown-toggler");
 		var sublists = document.querySelectorAll(".navbar__item_top_multilevel");
+		tooglers = Array.prototype.slice.call(tooglers)
+		sublists = Array.prototype.slice.call(sublists)
 		tooglers.forEach(function (el) {
 			el.addEventListener("click", onTogglerClick);
 		});

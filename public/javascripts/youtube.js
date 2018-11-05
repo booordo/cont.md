@@ -13,6 +13,8 @@ function onYouTubeIframeAPIReady() {
     window.addEventListener("load", function () {
         var openLinks = document.querySelectorAll(".js-video-open");
         var closeLinks = document.querySelectorAll(".js-video-close");
+        openLinks = Array.prototype.slice.call(openLinks)
+        closeLinks = Array.prototype.slice.call(closeLinks)
         openLinks.forEach(function (el) {
             el.addEventListener("click", onOpenLinkClick);
         });

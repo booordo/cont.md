@@ -1,6 +1,7 @@
 (function () {
     window.addEventListener("load", function () {
         var elements = document.querySelectorAll(".js-image-swap");
+        elements = Array.prototype.slice.call(elements)
         elements.forEach(function (el) {
             el.addEventListener("mouseenter", onMouseEnter);
         });
