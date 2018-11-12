@@ -4,6 +4,7 @@ const sourcemaps = require('gulp-sourcemaps');
 const wait = require('gulp-wait');
 const browserSync = require('browser-sync');
 const nodemon = require('nodemon');
+const { watch } = require('gulp');
 
 gulp.task('nodemon', function(cb) {
 	var started = false;
@@ -34,6 +35,9 @@ gulp.task('sass', () => {
 		.pipe(gulp.dest('./public/stylesheets/'))
 		.pipe(browserSync.stream());
 });
+
+watch('./styles/**/*.scss', gulp.series('sass'));
+watch('./views/**/*.pug').on('change', browserSync.reload);
 
 gulp.task('default', gulp.series('browser-sync', 'sass', () => {
 	gulp.watch('./styles/**/*.scss', ['sass']);

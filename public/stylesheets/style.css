@@ -2354,4 +2354,50 @@ input {
   align-items: center;
   justify-content: space-between; }
 
+.modal {
+  display: none;
+  cursor: pointer; }
+
+.modal_active {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5); }
+
+.modal__inner {
+  width: 500px;
+  padding: 0 30px 15px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  cursor: auto; }
+
+.modal__title {
+  color: #000;
+  text-align: center;
+  font-weight: 500;
+  font-size: 28px;
+  border-radius: 10px 10px 0 0;
+  padding: 25px;
+  margin: 0 -30px;
+  background-color: #ffffff; }
+
+.modal__text {
+  color: #000;
+  margin: 0 0 15px 0;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5em; }
+  .modal__text:nth-last-child(1) {
+    margin: 0; }
+
+.modal__text_alert {
+  padding: 15px 30px;
+  margin: 0 -30px 15px;
+  background-color: #cccccc; }
+
 /*# sourceMappingURL=public/maps/style.css.map */
