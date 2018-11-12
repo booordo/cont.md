@@ -3,8 +3,7 @@ exports.index = function (req, res, next) {
 }
 
 exports.detail = function (req, res, next) {
-	req.breadcrumbs(getPageName(req.params.name), '');
-	res.render('erp/' + req.params.name, {breadcrumbs: req.breadcrumbs()}, (err, html) => {
+	res.render('erp/' + req.params.name, {}, (err, html) => {
 		if (err) return next();
 		res.send(html);
 	});
