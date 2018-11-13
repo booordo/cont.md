@@ -1714,6 +1714,7 @@ input {
   font-size: 119px;
   font-weight: 600;
   text-transform: uppercase;
+  pointer-events: none;
   text-anchor: middle; }
 
 .puzzle__circle-choice {
@@ -1722,6 +1723,7 @@ input {
   font-weight: 500;
   line-height: 1em;
   text-transform: uppercase;
+  pointer-events: none;
   text-anchor: middle; }
 
 .puzzle__circle-subtitle {
@@ -1729,6 +1731,7 @@ input {
   font-size: 20px;
   margin-bottom: 10px;
   text-transform: uppercase;
+  pointer-events: none;
   text-anchor: middle; }
 
 .news-list {

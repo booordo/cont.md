@@ -91,6 +91,10 @@
             bottomText.transform(`T ${this.cx - bottomTextBBox.cx} 0`)
             // IE FIX <--
             var group = this.context.g(circle, title, topText, bottomText);
+            group.hover(this._circleHoverInHandler, this._circleHoverOutHandler, group, group);
+            group.click(function(e) {
+                document.location.href = "/erp/erp/";
+            });
             return group;
         }
         _createSector(fromAngle, toAngle, element) {
@@ -230,6 +234,26 @@
             this[2].attr({
                 fill: "#000"
             });
+        }
+        _circleHoverInHandler(e) {
+            var parent = this.parent();
+            var elements = parent.children();
+            if (elements.indexOf(this) !== elements.length - 1) {
+                parent.append(this);
+            }
+            Snap.animate(1, 1.2, (val) => {
+                this.attr({
+                    transform: `s${val}`
+                })
+            }, 150, mina.easein);
+        }
+        _circleHoverOutHandler(e) {
+            this.stop();
+            Snap.animate(1.2, 1, (val) => {
+                this.attr({
+                    transform: `s${val}`
+                })
+            }, 150, mina.easeout);
         }
         _setEventHandlers() {
             window.addEventListener("resize", (e) => {

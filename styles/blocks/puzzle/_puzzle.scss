@@ -30,6 +30,7 @@
     font-size: 119px;
     font-weight: 600;
     text-transform: uppercase;
+    pointer-events: none;
     text-anchor: middle;
 }
 
@@ -39,6 +40,7 @@
     font-weight: 500;
     line-height: 1em;
     text-transform: uppercase;
+    pointer-events: none;
     text-anchor: middle;
 }
 
@@ -47,5 +49,6 @@
     font-size: 20px;
     margin-bottom: 10px;
     text-transform: uppercase;
+    pointer-events: none;
     text-anchor: middle;
 }
