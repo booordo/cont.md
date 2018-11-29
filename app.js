@@ -31,6 +31,7 @@ app.use('/interviews', require('./routes/interviews'));
 app.use('/price_list', require('./routes/price-list'));
 app.use('/authorization', require('./routes/authorization'));
 app.use('/registration', require('./routes/registration'));
+app.use('/personal', require('./routes/personal'));
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

@@ -1,0 +1,17 @@
+extends layout2
+
+block content
+    +b.grid.inner
+        +e.row
+            +e.col._3
+                +b.UL.sidebar
+                    +e.LI.item._active
+                        +e.A.link(href="#") Все
+                    +e.LI.item
+                        +e.A.link(href="#") Новые
+            +e.col._9
+                +b.order-list
+                    +e.item
+                        +e.title Заказ №1 от 01.01.2018 11:47:32
+                    +e.item
+                        +e.title Заказ №2 от 10.01.2018 13:00:14

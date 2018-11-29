@@ -1186,11 +1186,14 @@ input {
   flex-grow: 1;
   flex-shrink: 0; }
 
+.content_padding {
+  padding-top: 30px;
+  padding-bottom: 30px; }
+
 .content_center {
   display: flex;
-  align-items: center;
   justify-content: center;
-  padding: 15px; }
+  align-items: center; }
 
 .content_dark {
   background-color: #EDEEF0; }
@@ -2217,6 +2220,9 @@ input {
 .auth-form__input-group {
   margin-bottom: 20px; }
 
+.auth-form__input-group_hidden {
+  display: none; }
+
 .auth-form__label {
   display: block;
   font-size: 16px;
@@ -2402,5 +2408,38 @@ input {
   padding: 15px 30px;
   margin: 0 -30px 15px;
   background-color: #cccccc; }
+
+.sidebar {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  box-shadow: 0 0 15px 0 #dddddd;
+  background-color: #fff; }
+
+.sidebar__item:hover {
+  background-color: #3498db; }
+
+.sidebar__item_active {
+  background-color: #2883c0; }
+  .sidebar__item_active:hover {
+    background-color: #2883c0; }
+  .sidebar__item_active .sidebar__link {
+    color: #fff; }
+
+.sidebar__link {
+  display: block;
+  padding: 15px;
+  text-decoration: none;
+  color: #2865a9; }
+  .sidebar__link:hover {
+    color: #fff; }
+
+.order-list {
+  background-color: #fff;
+  box-shadow: 0 0 15px 0 #dddddd; }
+
+.order-list__item {
+  padding: 15px;
+  border-bottom: 1px solid #dddddd; }
 
 /*# sourceMappingURL=public/maps/style.css.map */
