@@ -1,4 +1,4 @@
-.sidebar {
+.personal-sidebar {
     margin: 0;
     padding: 0;
     list-style: none;
@@ -6,23 +6,23 @@
     background-color: #fff;
 }
 
-.sidebar__item {
+.personal-sidebar__item {
     &:hover {
         background-color: $font-color-light-blue;
     }
 }
 
-.sidebar__item_active {
+.personal-sidebar__item_active {
     background-color: #2883c0;
     &:hover {
         background-color: #2883c0;
     }
-    .sidebar__link {
+    .personal-sidebar__link {
         color: #fff;    
     }   
 }
 
-.sidebar__link {
+.personal-sidebar__link {
     display: block;
     padding: 15px;
     text-decoration: none;

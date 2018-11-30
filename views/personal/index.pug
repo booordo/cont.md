@@ -1,16 +1,16 @@
-extends layout2
+extends layouts/personal
 
 block content
     +b.grid.inner
         +e.row
             +e.col._3
-                +b.UL.sidebar
+                +b.UL.personal-sidebar
                     +e.LI.item._active
                         +e.A.link(href="#") Все
                     +e.LI.item
                         +e.A.link(href="#") Новые
             +e.col._9
-                +b.order-list
+                +b.personal-orders
                     +e.item
                         +e.title Заказ №1 от 01.01.2018 11:47:32
                     +e.item

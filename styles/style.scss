@@ -53,8 +53,10 @@
 @import 'blocks/companies/companies';
 @import 'blocks/auth/auth';
 @import 'blocks/auth-form/auth-form';
+@import 'blocks/modal/modal';
+
 @import 'blocks/personal-header/personal-header';
 @import 'blocks/personal-footer/personal-footer';
-@import 'blocks/modal/modal';
-@import 'blocks/sidebar/sidebar';
-@import 'blocks/order-list/order-list';
+@import 'blocks/personal-navbar/personal-navbar';
+@import 'blocks/personal-sidebar/personal-sidebar';
+@import 'blocks/personal-orders/personal-orders';
