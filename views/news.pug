@@ -11,11 +11,11 @@ block content
 					+b.H2.title._size_md.mobile_hide Управление финансами
 					+b.news-list
 						each item in news
-							+e.A.item(href= item.link)
-								+e.DIV.label= item.date
-								+e.DIV.image-box
-									+e.IMG.image(src = item.img)
-								+e.DIV.text= item.text
+							+e.item
+								+e.image(style=`background-image: url(${item.img})`)
+								+e.H4.title= item.title
+								+e.P.text= item.text
+								+e.A.link(href= item.link) Читать далее...
 					+b.pagination
 						+e.A.controls.__arrow_left(href= "#") &laquo;
 						+e.A.controls.__page._actived(href= "#") 1

@@ -17,15 +17,12 @@
         var id = el.getAttribute("href")
         var modal = document.querySelector(id)
         modal.classList.add("modal_active")
-        disableScrolling()
-        e.preventDefault()
     }
 
     function onModalClick(e) {
         var el = e.target
         if (el.classList.contains("modal")) {
             el.classList.remove("modal_active")
-            enableScrolling()
         }
     }
 

@@ -1,76 +1,29 @@
 .card {
 	display: block;
-	position: relative;
-	overflow: hidden;
+	margin-bottom: 25px;
+}
+
+.card__title {
+	margin: 0;
+	font-weight: 500;
+	font-size: 1.5rem;
+}
+
+.card__text {
+	margin: 0;
+	padding-top: 15px;
 	padding-bottom: 15px;
-	text-decoration: none;
-	&:hover {
-		text-decoration: underline;
-	}
-}
-
-.card_size_s {
-	height: 250px;
-}
-
-.card_size_m {
-	height: 300px;
-}
-
-.card_size_l {
-	height: 500px;
-}
-
-.card_theme_dark {
-	color: $link-color-dark;
-}
-
-.card_theme_light {
-	color: $link-color-light;
-}
-
-.card__image {
-	min-width: 100%;
-	width: auto;
-	display: block;
-	padding-bottom: 15px;
-}
-
-.card__image_size_s {
-	height: 80%;
-}
-
-.card__image_size_m {
-	height: 90%;
-}
-
-.card__image_size_l {
-	height: 90%;
-}
-
-.card__label {
-	position: absolute;
-	top: 10px;
-	left: 10px;
-	padding: 5px 15px;
-	background-color: $color-yellow;
-	color: $font-color-black;
+	line-height: 1.5em;
 }
 
 .card__link {
-	color: inherit;
-	line-height: 1.3em;
+	display: inline-block;
+	padding: 10px;
+	border: 1px solid #2865A9;
+	color: #2865A9;
 	text-decoration: none;
-}
-
-.card__link_size_s {
-	font-size: 1.066666666666667rem;	
-}
-
-.card__link_size_m {
-	font-size: 1.4rem;
-}
-
-.card__link_size_l {
-	font-size: 1.4rem;
+	&:hover {
+		border-color: #3498DB;
+		color: #3498DB;
+	}
 }
