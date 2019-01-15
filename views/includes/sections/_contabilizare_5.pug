@@ -13,6 +13,6 @@
                 +e.A.button.button._theme_3d-reverse._size_m.js-video-open(href=item.link data-target=item.video)= item.text
               else
                 if item.class
-                  +e.A.button.button._theme_3d-reverse._size_m(href=item.link class=item.class)= item.text  
+                  +e.A.button.button._theme_3d-reverse._size_m(href=item.link class=item.class data-src=item.dataSrc)= item.text  
                 else
                   +e.A.button.button._theme_3d-reverse._size_m(href=item.link)= item.text  
