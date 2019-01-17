@@ -823,6 +823,21 @@ input {
 .title_weight_bold {
   font-weight: 500; }
 
+.title_pb_xs {
+  padding-bottom: 10px; }
+
+.title_pb_sm {
+  padding-bottom: 15px; }
+
+.title_pb_md {
+  padding-bottom: 20px; }
+
+.title_pb_lg {
+  padding-bottom: 25px; }
+
+.title_pb_xl {
+  padding-bottom: 30px; }
+
 .title__accent {
   font-weight: 500; }
 
