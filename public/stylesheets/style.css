@@ -573,7 +573,8 @@ input {
 .section {
   padding-top: 100px;
   padding-bottom: 100px;
-  background-color: #fff; }
+  background-color: #fff;
+  padding-left: calc(100vw - 100%); }
 
 .section_size_xs {
   padding-top: 50px;
