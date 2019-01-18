@@ -14,30 +14,29 @@
     })
 
     function onLinkClick(e) {
-        var id = e.target.getAttribute("data-src");
-        var modal = document.getElementById(id);
+        var id = e.target.dataset.src;
         window.location.hash = id;
-        modal.classList.add("modal_active");
-        disableScrolling(); 
+        disableScrolling();
+        open(document.getElementById(id)); 
     }
 
-    function onButtonClick(e) {
-        var button = e.target;
-        var modal = button.closest(".modal");
+    function onButtonClick() {
         window.history.back();
-        modal.classList.remove("modal_active");
-        enableScrolling();
     }
 
     function onHashChange() {
-        var elements = document.querySelectorAll(".modal");
-        elements = Array.prototype.slice.call(elements);
-        elements.forEach(function(el) {
-            if(window.location.hash != "#" + el.getAttribute("id") && el.classList.contains("modal_active")) {
-                enableScrolling();
-                el.classList.remove("modal_active");
-            }
-        });
+        if (window.location.hash !== "") return;
+        var elements = Array.prototype.slice.call(document.querySelectorAll(".modal"));
+        elements.forEach(close);
+        enableScrolling();
+    }
+
+    function open(modal) {
+        modal.classList.add("modal_active");
+    }
+
+    function close(modal) {
+        modal.classList.remove("modal_active");
     }
 
     function enableScrolling() {
