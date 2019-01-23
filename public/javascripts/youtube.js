@@ -2,20 +2,8 @@ var YTPlayer;
 
 function onYouTubeIframeAPIReady() {
     var reviews = Array.prototype.slice.call(document.querySelectorAll(".reviews__video-box"));
-    var modal = document.getElementById('Youtube');
-    if (modal !== null) {
-        YTPlayer = new YT.Player('Youtube', {
-            height: 510,
-            width: 900
-        });
-    } 
     reviews.forEach(function(el) {
-        var player = new YT.Player(el.id, {
-            height: '290',
-            width: '100%',
-            videoId: el.dataset.videoId
-        });
-        console.log(player);   
+        new YT.Player(el.id);   
     });
 }
 
