@@ -2425,11 +2425,12 @@ input {
   cursor: auto; }
 
 .modal__header {
-  padding: 25px;
+  padding: 25px 65px;
   border-radius: 10px 10px 0 0;
   text-align: center;
   background-color: #ffffff;
-  color: #343434; }
+  color: #343434;
+  position: relative; }
 
 .modal__body {
   padding: 25px;
@@ -2448,7 +2449,19 @@ input {
 .modal__title {
   font-weight: 500;
   font-size: 22px;
+  line-height: 25px;
   margin: 0; }
+
+.modal__close {
+  font-size: 36px;
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  cursor: pointer;
+  color: #1e4c80;
+  transition: color .2s; }
+  .modal__close:hover {
+    color: #ffffff; }
 
 .modal__subtitle {
   font-weight: 500;

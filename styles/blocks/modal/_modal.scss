@@ -88,11 +88,12 @@
 }
 
 .modal__header {
-    padding: 25px;
+    padding: 25px 65px;
     border-radius: 10px 10px 0 0;
     text-align: center;
     background-color: #ffffff;
     color: #343434;
+    position: relative;
 }
 
 .modal__body {
@@ -114,7 +115,21 @@
 .modal__title {
     font-weight: 500;
     font-size: 22px;
+    line-height: 25px;
     margin: 0;
+}
+
+.modal__close {
+    font-size: 36px;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    cursor: pointer;
+    color: darken($color-blue, 10%);
+    transition: color .2s;
+    &:hover {
+        color: #ffffff;
+    }
 }
 
 .modal__subtitle {
