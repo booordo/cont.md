@@ -1,42 +1,46 @@
 (function() {
     window.addEventListener("load", function() {
-        var elements = document.querySelectorAll(".js-modal");
-        var buttons = document.querySelectorAll(".modal__button");
-        elements = Array.prototype.slice.call(elements);
-        buttons = Array.prototype.slice.call(buttons);
-        elements.forEach(function(el) {
-            el.addEventListener("click", onLinkClick);
-        });
-        buttons.forEach(function(el) {
-            el.addEventListener("click", onButtonClick);
-        });
+        var modals = Array.prototype.slice.call(document.querySelectorAll(".modal"));
+        var btnsOpen = Array.prototype.slice.call(document.querySelectorAll(".js-open-modal"));
+        var btnsClose = Array.prototype.slice.call(document.querySelectorAll(".modal__close"));
+        var btnsControl = Array.prototype.slice.call(document.querySelectorAll(".modal__button"));
+        modals.forEach(function(el) { el.addEventListener("click", onModalClick) });
+        btnsOpen.forEach(function(el) { el.addEventListener("click", onOpenButtonClick) });
+        btnsClose.forEach(function(el) { el.addEventListener("click", onCloseButtonClick) });
+        btnsControl.forEach(function(el) { el.addEventListener("click", onControlButtonClick) });
         window.addEventListener("hashchange", onHashChange);
     })
 
-    function onLinkClick(e) {
-        var id = e.target.dataset.src;
-        window.location.hash = id;
-        disableScrolling();
-        open(document.getElementById(id)); 
+    function onModalClick(e) {
+        if (e.target.classList.contains("modal")) window.history.back(); 
     }
 
-    function onButtonClick() {
-        window.history.back();
+    function onOpenButtonClick(e) {
+        open(e.target.getAttribute("data-src")); 
+    }
+
+    function onCloseButtonClick() {
+        window.history.back();    
+    }
+
+    function onControlButtonClick() {
+        window.history.back();    
     }
 
     function onHashChange() {
         if (window.location.hash !== "") return;
-        var elements = Array.prototype.slice.call(document.querySelectorAll(".modal"));
-        elements.forEach(close);
-        enableScrolling();
+        Array.prototype.slice.call(document.querySelectorAll(".modal")).forEach(close);
     }
 
-    function open(modal) {
-        modal.classList.add("modal_active");
+    function open(id) {
+        window.location.hash = id;
+        document.getElementById(id).classList.add("modal_active");
+        disableScrolling();
     }
 
     function close(modal) {
         modal.classList.remove("modal_active");
+        enableScrolling();
     }
 
     function enableScrolling() {

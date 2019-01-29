@@ -1,0 +1,51 @@
+.info {
+
+}
+
+.info__list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.info__list-item {
+    font-family: $font-family-primary;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    color: $font-color-black;
+    position: relative;
+    counter-increment: list;
+    padding: 25px;
+    width: 50%;
+    color: $font-color-black;
+    background-color: darken(#fff,5);
+    &:nth-child(4n+2), &:nth-child(4n+3) {
+        background-color: darken(#fff,10);   
+    }
+}
+
+.info__subtitle {
+    font-family: $font-family-second;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 30px;
+    margin: 0 0 15px;
+    padding: 0;
+    position: relative;
+    z-index: 2;
+}
+
+.info__text {
+    font-family: $font-family-primary;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    color: $font-color-black;
+    position: relative;
+    z-index: 2;
+    margin: 0;
+    padding: 0;
+}

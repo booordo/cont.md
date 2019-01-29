@@ -32,6 +32,7 @@ app.use('/price_list', require('./routes/price-list'));
 app.use('/authorization', require('./routes/authorization'));
 app.use('/registration', require('./routes/registration'));
 app.use('/personal', require('./routes/personal'));
+app.use('/info', require('./routes/info'));
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
