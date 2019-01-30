@@ -2539,10 +2539,11 @@ input {
 
 .info__list {
   list-style: none;
-  padding: 0;
+  padding: 15px 0 0;
   margin: 0;
   display: flex;
-  flex-wrap: wrap; }
+  flex-wrap: wrap;
+  justify-content: space-between; }
 
 .info__list-item {
   font-family: "FiraSans", "Arial", sans-serif;
@@ -2552,33 +2553,69 @@ input {
   color: #313132;
   position: relative;
   counter-increment: list;
-  padding: 25px;
-  width: 50%;
+  width: calc(50% - 15px);
   color: #313132;
-  background-color: #f2f2f2; }
-  .info__list-item:nth-child(4n+2), .info__list-item:nth-child(4n+3) {
-    background-color: #e6e6e6; }
+  background-color: #fff;
+  padding-bottom: 30px; }
+  .info__list-item:before {
+    position: absolute;
+    display: block;
+    box-sizing: border-box;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    text-align: right;
+    color: rgba(0, 0, 0, 0.12);
+    font-family: "FiraSans", "Arial", sans-serif;
+    font-size: 45px;
+    content: "#" counter(list);
+    z-index: 1; }
+  .info__list-item .info__text {
+    margin: 0; }
+  .info__list-item:nth-last-child(1), .info__list-item:nth-last-child(2) {
+    padding-bottom: 0; }
+
+.info__sublist {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  list-style: disc; }
+
+.info__title {
+  font-family: "FiraSans", "Arial", sans-serif;
+  color: #313132;
+  font-size: 36px;
+  margin: 30px 0 15px; }
+  .info__title:first-child {
+    margin-top: 0; }
 
 .info__subtitle {
-  font-family: "Futura", "Times New Roman", serif;
-  text-transform: uppercase;
-  font-weight: 700;
-  font-size: 30px;
+  font-family: "FiraSans", "Arial", sans-serif;
+  color: #313132;
+  font-weight: normal;
+  font-size: 26px;
   margin: 0 0 15px;
   padding: 0;
   position: relative;
   z-index: 2; }
 
 .info__text {
+  margin-top: 15px;
+  margin-bottom: 15px;
   font-family: "FiraSans", "Arial", sans-serif;
   font-size: 16px;
   font-weight: 400;
   line-height: 24px;
   color: #313132;
   position: relative;
-  z-index: 2;
-  margin: 0;
-  padding: 0; }
+  z-index: 2; }
+  .info__text:first-child {
+    margin-top: 0; }
+
+.info__button {
+  margin-top: 15px; }
 
 .personal-header {
   box-shadow: 0 0 15px 0 #dddddd;
