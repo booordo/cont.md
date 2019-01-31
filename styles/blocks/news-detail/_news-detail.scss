@@ -21,10 +21,22 @@
 }
 
 .news-detail__text {
-	color: #000;
-	font-size: 1.133333333333333rem;
-	line-height: 1.470588235294118em;
-	margin-bottom: 10px;
+	color: #313131;
+	font-size: 16px;
+	line-height: 24px;
+}
+
+.news-detail__list {
+	list-style: none;
+	padding: 0;
+}
+
+.news-detail__list-item {
+	padding: 15px;
+	background-color: #fff;
+	&:nth-child(even) {
+		background-color: #eeeeee;
+	}
 }
 
 .news-detail__image {
