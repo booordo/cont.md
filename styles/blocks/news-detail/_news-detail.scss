@@ -26,9 +26,23 @@
 	line-height: 24px;
 }
 
+.news-detail__subtitle {
+	font-size: 26px;
+	margin-top: 30px;
+	margin-bottom: 15px;
+	&:nth-child(1) {
+		margin-top: 0;
+	}
+}
+
 .news-detail__list {
 	list-style: none;
 	padding: 0;
+	font-family: $font-family-primary;
+	font-size: 16px;
+	line-height: 24px;
+	font-weight: 400;
+	color: #313131;
 }
 
 .news-detail__list-item {
