@@ -90,6 +90,16 @@
     }
 }
 
+.info__text_warning {
+    padding: 15px;
+    background-color: rgba($color-blue, 0.1);
+    border-left: 5px solid $color-blue;
+}
+
+.info__link {
+    text-decoration: none;
+}
+
 .info__button {
     margin-top: 15px;
 }

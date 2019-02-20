@@ -37,7 +37,7 @@
   text-align: center;
   padding: 15px 0;
   text-transform: uppercase;
-  font-family: "Futura", sans-serif;
+  font-family: $font-family-second;
   font-weight: 500;
   .navbar__link_active {
     background-color: $color-light-blue;
@@ -127,7 +127,7 @@
   }
   .navbar__sublink_top {
     border-bottom: 1px solid #2a2a2a;
-    font-family: "Futura", sans-serif;
+    font-family: $font-family-second;
     text-transform: uppercase;
     font-weight: 500;
     &:before {

@@ -1,84 +1,48 @@
+/* fira-sans-300 - latin_cyrillic */
 @font-face {
-  font-family: 'FiraSans';
-  src: url("../fonts/FiraSans-Light.eot");
-  src: local("Fira Sans Light"), url("../fonts/FiraSans-Light.eot") format("embedded-opentype"), url("../fonts/FiraSans-Light.woff") format("woff"), url("../fonts/FiraSans-Light.ttf") format("truetype");
+  font-family: 'Fira Sans';
+  font-style: normal;
   font-weight: 300;
-  font-style: normal; }
+  src: url("../fonts/fira-sans-v8-latin_cyrillic-300.eot");
+  /* IE9 Compat Modes */
+  src: local("Fira Sans Light"), local("FiraSans-Light"), url("../fonts/fira-sans-v8-latin_cyrillic-300.eot?#iefix") format("embedded-opentype"), url("../fonts/fira-sans-v8-latin_cyrillic-300.woff2") format("woff2"), url("../fonts/fira-sans-v8-latin_cyrillic-300.woff") format("woff"), url("../fonts/fira-sans-v8-latin_cyrillic-300.ttf") format("truetype"), url("../fonts/fira-sans-v8-latin_cyrillic-300.svg#FiraSans") format("svg");
+  /* Legacy iOS */ }
 
+/* fira-sans-regular - latin_cyrillic */
 @font-face {
-  font-family: 'FiraSans';
-  src: url("../fonts/FiraSans-LightItalic.eot");
-  src: local("Fira Sans Light Italic"), url("../fonts/FiraSans-LightItalic.eot") format("embedded-opentype"), url("../fonts/FiraSans-LightItalic.woff") format("woff"), url("../fonts/FiraSans-LightItalic.ttf") format("truetype");
-  font-weight: 300;
-  font-style: italic; }
-
-@font-face {
-  font-family: 'FiraSans';
-  src: url("../fonts/FiraSans-Regular.eot");
-  src: local("Fira Sans Regular"), url("../fonts/FiraSans-Regular.eot") format("embedded-opentype"), url("../fonts/FiraSans-Regular.woff") format("woff"), url("../fonts/FiraSans-Regular.ttf") format("truetype");
+  font-family: 'Fira Sans';
+  font-style: normal;
   font-weight: 400;
-  font-style: normal; }
+  src: url("../fonts/fira-sans-v8-latin_cyrillic-regular.eot");
+  /* IE9 Compat Modes */
+  src: local("Fira Sans Regular"), local("FiraSans-Regular"), url("../fonts/fira-sans-v8-latin_cyrillic-regular.eot?#iefix") format("embedded-opentype"), url("../fonts/fira-sans-v8-latin_cyrillic-regular.woff2") format("woff2"), url("../fonts/fira-sans-v8-latin_cyrillic-regular.woff") format("woff"), url("../fonts/fira-sans-v8-latin_cyrillic-regular.ttf") format("truetype"), url("../fonts/fira-sans-v8-latin_cyrillic-regular.svg#FiraSans") format("svg");
+  /* Legacy iOS */ }
 
+/* fira-sans-300italic - latin_cyrillic */
 @font-face {
-  font-family: 'FiraSans';
-  src: url("../fonts/FiraSans-Medium.eot");
-  src: local("Fira Sans Medium"), url("../fonts/FiraSans-Medium.eot") format("embedded-opentype"), url("../fonts/FiraSans-Medium.woff") format("woff"), url("../fonts/FiraSans-Medium.ttf") format("truetype");
+  font-family: 'Fira Sans';
+  font-style: italic;
+  font-weight: 300;
+  src: url("../fonts/fira-sans-v8-latin_cyrillic-300italic.eot");
+  /* IE9 Compat Modes */
+  src: local("Fira Sans Light Italic"), local("FiraSans-LightItalic"), url("../fonts/fira-sans-v8-latin_cyrillic-300italic.eot?#iefix") format("embedded-opentype"), url("../fonts/fira-sans-v8-latin_cyrillic-300italic.woff2") format("woff2"), url("../fonts/fira-sans-v8-latin_cyrillic-300italic.woff") format("woff"), url("../fonts/fira-sans-v8-latin_cyrillic-300italic.ttf") format("truetype"), url("../fonts/fira-sans-v8-latin_cyrillic-300italic.svg#FiraSans") format("svg");
+  /* Legacy iOS */ }
+
+/* fira-sans-500 - latin_cyrillic */
+@font-face {
+  font-family: 'Fira Sans';
+  font-style: normal;
   font-weight: 500;
-  font-style: normal; }
-
-@font-face {
-  font-family: 'FiraSans';
-  src: url("../fonts/FiraSans-MediumItalic.eot");
-  src: local("Fira Sans Medium Italic"), url("../fonts/FiraSans-MediumItalic.eot") format("embedded-opentype"), url("../fonts/FiraSans-MediumItalic.woff") format("woff"), url("../fonts/FiraSans-MediumItalic.ttf") format("truetype");
-  font-weight: 500;
-  font-style: italic; }
-
-@font-face {
-  font-family: 'FiraSans';
-  src: url("../fonts/FiraSans-Bold.eot");
-  src: local("Fira Sans Bold"), url("../fonts/FiraSans-Bold.eot") format("embedded-opentype"), url("../fonts/FiraSans-Bold.woff") format("woff"), url("../fonts/FiraSans-Bold.ttf") format("truetype");
-  font-weight: 600;
-  font-style: normal; }
-
-@font-face {
-  font-family: 'FiraSans';
-  src: url("../fonts/FiraSans-BoldItalic.eot");
-  src: local("Fira Sans Bold Italic"), url("../fonts/FiraSans-BoldItalic.eot") format("embedded-opentype"), url("../fonts/FiraSans-BoldItalic.woff") format("woff"), url("../fonts/FiraSans-BoldItalic.ttf") format("truetype");
-  font-weight: 600;
-  font-style: italic; }
-
-@font-face {
-  font-family: 'Futura';
-  src: url("../fonts/FuturaDemiC.eot");
-  src: local("FuturaDemiC"), url("../fonts/FuturaDemiC.woff") format("woff"), url("../fonts/FuturaDemiC.ttf") format("truetype"), url("../fonts/FuturaDemiC.svg") format("svg");
-  font-weight: 600;
-  font-style: normal; }
+  src: url("../fonts/fira-sans-v8-latin_cyrillic-500.eot");
+  /* IE9 Compat Modes */
+  src: local("Fira Sans Medium"), local("FiraSans-Medium"), url("../fonts/fira-sans-v8-latin_cyrillic-500.eot?#iefix") format("embedded-opentype"), url("../fonts/fira-sans-v8-latin_cyrillic-500.woff2") format("woff2"), url("../fonts/fira-sans-v8-latin_cyrillic-500.woff") format("woff"), url("../fonts/fira-sans-v8-latin_cyrillic-500.ttf") format("truetype"), url("../fonts/fira-sans-v8-latin_cyrillic-500.svg#FiraSans") format("svg");
+  /* Legacy iOS */ }
 
 @font-face {
   font-family: 'Futura';
   src: url("../fonts/FuturaMediumC.eot");
   src: local("FuturaMediumC"), url("../fonts/FuturaMediumC.woff") format("woff"), url("../fonts/FuturaMediumC.ttf") format("truetype"), url("../fonts/FuturaMediumC.svg") format("svg");
   font-weight: 500;
-  font-style: normal; }
-
-@font-face {
-  font-family: 'Futura';
-  src: url("../fonts/FuturaLightC.eot");
-  src: local("FuturaLightC"), url("../fonts/FuturaLightC.woff") format("woff"), url("../fonts/FuturaLightC.ttf") format("truetype"), url("../fonts/FuturaLightC.svg") format("svg");
-  font-weight: 300;
-  font-style: normal; }
-
-@font-face {
-  font-family: 'FuturaFuturis';
-  src: url("../fonts/FuturaFuturisLightC.eot");
-  src: url("../fonts/FuturaFuturisLightC.eot?#iefix") format("embedded-opentype"), url("../fonts/FuturaFuturisLightC.otf") format("opentype");
-  font-weight: 300;
-  font-style: normal; }
-
-@font-face {
-  font-family: 'Ubuntu';
-  src: url("../fonts/UbuntuLight.ttf") format("truetype");
-  font-weight: 300;
   font-style: normal; }
 
 /*! normalize.css v7.0.0 | MIT License | github.com/necolas/normalize.css */
@@ -478,7 +442,7 @@ template {
 html {
   font-size: 15px;
   color: #313132;
-  font-family: "FiraSans", "Arial", sans-serif;
+  font-family: "Fira Sans", "Arial", sans-serif;
   height: 100%; }
 
 body {
@@ -706,17 +670,33 @@ input {
 
 .button_theme_simple, .button_theme_simple-reverse {
   border: 2px solid #fff;
-  font-family: "FiraSans", "Arial", sans-serif;
+  font-family: "Fira Sans", "Arial", sans-serif;
   font-weight: 300; }
 
 .button_theme_3d, .button_theme_3d-reverse {
-  font-family: "FiraSans", "Arial", sans-serif;
+  font-family: "Fira Sans", "Arial", sans-serif;
   font-weight: 300; }
 
 .button_theme_flat, .button_theme_flat-reverse {
   font-family: "Futura", "Times New Roman", serif;
-  font-weight: 600;
+  font-weight: 500;
   text-transform: uppercase; }
+
+.button_theme_empty {
+  border: 1px solid #2865A9;
+  color: #2865A9; }
+  .button_theme_empty:hover, .button_theme_empty:active {
+    border-color: #3498DB;
+    color: #3498DB; }
+
+.button_theme_full {
+  border: 1px solid #2865A9;
+  background-color: #2865A9;
+  color: #ffffff; }
+  .button_theme_full:hover, .button_theme_full:active {
+    border: 1px solid #3498DB;
+    background-color: #3498DB;
+    color: #ffffff; }
 
 .button_theme_simple {
   background-color: #3498db;
@@ -859,7 +839,7 @@ input {
 
 .subtitle {
   display: block;
-  font-family: "FiraSans", "Arial", sans-serif;
+  font-family: "Fira Sans", "Arial", sans-serif;
   font-size: 1.533333333333333rem;
   font-style: italic;
   font-weight: 300;
@@ -950,7 +930,7 @@ input {
     color: #f1c40f; }
 
 .thumbnails_theme_pazzle .thumbnails__text {
-  font-family: "FiraSans", "Arial", sans-serif;
+  font-family: "Fira Sans", "Arial", sans-serif;
   font-size: 1.266666666666667rem;
   font-weight: 500;
   text-transform: uppercase;
@@ -1038,7 +1018,7 @@ input {
   margin-bottom: 30px; }
 
 .article__text {
-  font-family: "FiraSans", "Arial", sans-serif;
+  font-family: "Fira Sans", "Arial", sans-serif;
   font-weight: 300;
   font-size: 1.133333333333333rem;
   line-height: 1.470588235294118em;
@@ -1058,7 +1038,7 @@ input {
     display: block; } }
 
 .link {
-  font-family: "FiraSans", "Arial", sans-serif;
+  font-family: "Fira Sans", "Arial", sans-serif;
   font-weight: 300;
   font-size: 1.066666666666667rem;
   color: #4ea5e0;
@@ -1359,7 +1339,7 @@ input {
   text-align: center;
   padding: 15px 0;
   text-transform: uppercase;
-  font-family: "Futura", sans-serif;
+  font-family: "Futura", "Times New Roman", serif;
   font-weight: 500; }
   .navbar__link_top .navbar__link_active {
     background-color: #3498db; }
@@ -1433,7 +1413,7 @@ input {
     text-align: center; }
   .navbar__sublink_top {
     border-bottom: 1px solid #2a2a2a;
-    font-family: "Futura", sans-serif;
+    font-family: "Futura", "Times New Roman", serif;
     text-transform: uppercase;
     font-weight: 500; }
     .navbar__sublink_top:before {
@@ -1449,7 +1429,7 @@ input {
   padding-left: 10px; }
 
 .navbar__link_bottom {
-  font-family: "FiraSans", "Arial", sans-serif;
+  font-family: "Fira Sans", "Arial", sans-serif;
   font-size: 1rem;
   font-weight: 300;
   color: #313132; }
@@ -1498,7 +1478,7 @@ input {
   height: auto; }
 
 .subscribe__text {
-  font-family: "FiraSans", sans-serif;
+  font-family: "Fira Sans", "Arial", sans-serif;
   font-size: 1.266666666666667rem;
   font-weight: 300;
   font-style: italic;
@@ -1719,7 +1699,7 @@ input {
   text-anchor: middle; }
 
 .puzzle__circle-subtitle {
-  font-family: "FuturaFuturis", Arial, sans-serif;
+  font-family: "Futura", "Times New Roman", serif;
   font-size: 20px;
   margin-bottom: 10px;
   text-transform: uppercase;
@@ -2076,7 +2056,7 @@ input {
 .news-detail__list {
   list-style: none;
   padding: 0;
-  font-family: "FiraSans", "Arial", sans-serif;
+  font-family: "Fira Sans", "Arial", sans-serif;
   font-size: 16px;
   line-height: 24px;
   font-weight: 400;
@@ -2534,7 +2514,7 @@ input {
     margin-top: 0; }
 
 .modal__text {
-  font-family: "FiraSans", "Arial", sans-serif;
+  font-family: "Fira Sans", "Arial", sans-serif;
   color: #313132;
   font-size: 16px;
   line-height: 24px;
@@ -2562,7 +2542,7 @@ input {
   background-color: #2865a9;
   text-align: center;
   color: #ffffff;
-  font-family: "FiraSans", "Arial", sans-serif;
+  font-family: "Fira Sans", "Arial", sans-serif;
   font-size: 16px;
   font-weight: 400;
   cursor: pointer;
@@ -2585,7 +2565,7 @@ input {
   justify-content: space-between; }
 
 .info__list-item {
-  font-family: "FiraSans", "Arial", sans-serif;
+  font-family: "Fira Sans", "Arial", sans-serif;
   font-size: 16px;
   font-weight: 400;
   line-height: 24px;
@@ -2606,7 +2586,7 @@ input {
     width: 100%;
     text-align: right;
     color: rgba(0, 0, 0, 0.12);
-    font-family: "FiraSans", "Arial", sans-serif;
+    font-family: "Fira Sans", "Arial", sans-serif;
     font-size: 45px;
     content: "#" counter(list);
     z-index: 1; }
@@ -2623,7 +2603,7 @@ input {
   list-style: disc; }
 
 .info__title {
-  font-family: "FiraSans", "Arial", sans-serif;
+  font-family: "Fira Sans", "Arial", sans-serif;
   color: #313132;
   font-size: 36px;
   margin: 30px 0 15px; }
@@ -2631,7 +2611,7 @@ input {
     margin-top: 0; }
 
 .info__subtitle {
-  font-family: "FiraSans", "Arial", sans-serif;
+  font-family: "Fira Sans", "Arial", sans-serif;
   color: #313132;
   font-weight: normal;
   font-size: 26px;
@@ -2643,7 +2623,7 @@ input {
 .info__text {
   margin-top: 15px;
   margin-bottom: 15px;
-  font-family: "FiraSans", "Arial", sans-serif;
+  font-family: "Fira Sans", "Arial", sans-serif;
   font-size: 16px;
   font-weight: 400;
   line-height: 24px;
@@ -2652,6 +2632,14 @@ input {
   z-index: 2; }
   .info__text:first-child {
     margin-top: 0; }
+
+.info__text_warning {
+  padding: 15px;
+  background-color: rgba(40, 101, 169, 0.1);
+  border-left: 5px solid #2865a9; }
+
+.info__link {
+  text-decoration: none; }
 
 .info__button {
   margin-top: 15px; }
