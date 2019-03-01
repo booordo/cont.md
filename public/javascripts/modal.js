@@ -16,6 +16,7 @@
     }
 
     function onOpenButtonClick(e) {
+        if (!e.target.classList.contains("js-open-modal")) return;
         open(e.target.getAttribute("data-src")); 
     }
 
@@ -24,6 +25,7 @@
     }
 
     function onControlButtonClick() {
+        if (window.location.hash == "") return;
         window.history.back();    
     }
 
