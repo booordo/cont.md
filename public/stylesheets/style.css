@@ -1742,6 +1742,16 @@ input {
     border-color: #3498DB;
     color: #3498DB; }
 
+.news-list__release {
+  position: relative;
+  text-align: center;
+  background-color: #2865a9;
+  font-family: "Fira Sans", "Arial", sans-serif;
+  font-weight: 400;
+  color: #fff;
+  font-size: 120px;
+  padding: 50px; }
+
 .news-category {
   padding-top: 25px;
   padding-bottom: 25px; }
