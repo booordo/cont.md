@@ -2581,7 +2581,7 @@ input {
 .info__title {
   font-family: "Fira Sans", "Arial", sans-serif;
   color: #313132;
-  font-size: 36px;
+  font-size: 26px;
   margin: 30px 0 15px;
   font-weight: 500; }
   .info__title:first-child {
@@ -2616,10 +2616,10 @@ input {
   border-left: 5px solid #2865a9; }
 
 .info__link {
-  text-decoration: none; }
-
-.info__button {
-  margin-top: 15px; }
+  text-decoration: none;
+  color: #2865a9; }
+  .info__link:hover {
+    color: #3498db; }
 
 .personal-header {
   box-shadow: 0 0 15px 0 #dddddd;

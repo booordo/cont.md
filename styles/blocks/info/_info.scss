@@ -61,7 +61,7 @@
 .info__title {
     font-family: $font-family-primary;
     color: $font-color-black;
-    font-size: 36px;
+    font-size: 26px;
     margin: 30px 0 15px;
     font-weight: 500;
     &:first-child {
@@ -103,8 +103,8 @@
 
 .info__link {
     text-decoration: none;
-}
-
-.info__button {
-    margin-top: 15px;
+    color: $color-blue;
+    &:hover {
+        color: $color-light-blue;
+    }
 }
