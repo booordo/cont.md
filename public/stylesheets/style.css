@@ -960,9 +960,22 @@ input {
 
 .card {
   display: block;
+  padding: 25px;
+  background-color: #fff;
+  box-shadow: 5px 5px 5px 0 #e1e1e1;
   margin-bottom: 30px; }
   .card:nth-last-child(1) {
     margin-bottom: 0; }
+
+.card__release {
+  margin: -25px -25px 25px -25px;
+  text-align: center;
+  background-color: #2865a9;
+  font-family: "Fira Sans", "Arial", sans-serif;
+  font-weight: 400;
+  color: #fff;
+  font-size: 80px;
+  padding: 50px; }
 
 .card__title {
   margin: 0;
@@ -980,7 +993,8 @@ input {
   margin: 0;
   padding-top: 15px;
   padding-bottom: 15px;
-  line-height: 1.5em; }
+  line-height: 1.5em;
+  font-size: 16px; }
 
 .card__link {
   display: inline-block;
@@ -1691,7 +1705,7 @@ input {
 
 .puzzle__circle-choice {
   font-family: "Fira Sans", Arial, sans-serif;
-  font-size: 20.5px;
+  font-size: 22.7px;
   font-weight: 500;
   line-height: 1em;
   text-transform: uppercase;
@@ -2536,47 +2550,50 @@ input {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between; }
-  .info__list_condenced .info__list-item {
-    font-family: "Fira Sans", "Arial", sans-serif;
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 24px;
-    color: #313132;
-    position: relative;
-    counter-increment: list;
-    width: calc(50% - 15px);
-    color: #313132;
-    background-color: #fff;
-    padding-bottom: 30px; }
-    .info__list_condenced .info__list-item:before {
-      position: absolute;
-      display: block;
-      box-sizing: border-box;
-      top: 0;
-      left: 0;
-      height: 100%;
-      width: 100%;
-      text-align: right;
-      color: rgba(0, 0, 0, 0.12);
-      font-family: "Fira Sans", "Arial", sans-serif;
-      font-size: 45px;
-      content: "#" counter(list);
-      z-index: 1; }
-    .info__list_condenced .info__list-item .info__text {
-      margin: 0; }
-    .info__list_condenced .info__list-item:nth-last-child(1), .info__list_condenced .info__list-item:nth-last-child(2) {
-      padding-bottom: 0; }
-  .info__list_condenced .info__sublist {
-    margin: 0;
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 24px;
-    list-style: disc; }
 
 .info__list-item {
   font-size: 16px;
   line-height: 24px;
   font-weight: 400; }
+
+.info__list-item_condenced {
+  font-family: "Fira Sans", "Arial", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  color: #313132;
+  position: relative;
+  counter-increment: list;
+  width: calc(50% - 15px);
+  color: #313132;
+  background-color: #fff;
+  padding-bottom: 30px; }
+  .info__list-item_condenced:before {
+    position: absolute;
+    display: block;
+    box-sizing: border-box;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    text-align: right;
+    color: rgba(0, 0, 0, 0.12);
+    font-family: "Fira Sans", "Arial", sans-serif;
+    font-size: 45px;
+    content: "#" counter(list);
+    z-index: 1; }
+  .info__list-item_condenced:nth-last-child(1), .info__list-item_condenced:nth-last-child(2) {
+    padding-bottom: 0; }
+
+.info__list-title {
+  font-family: "Fira Sans", "Arial", sans-serif;
+  color: #313132;
+  font-weight: 400;
+  font-size: 26px;
+  margin: 0 0 15px;
+  padding: 0;
+  position: relative;
+  z-index: 2; }
 
 .info__title {
   font-family: "Fira Sans", "Arial", sans-serif;
@@ -2586,16 +2603,6 @@ input {
   font-weight: 500; }
   .info__title:first-child {
     margin-top: 0; }
-
-.info__subtitle {
-  font-family: "Fira Sans", "Arial", sans-serif;
-  color: #313132;
-  font-weight: 400;
-  font-size: 26px;
-  margin: 0 0 15px;
-  padding: 0;
-  position: relative;
-  z-index: 2; }
 
 .info__text {
   margin-top: 15px;

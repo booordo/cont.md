@@ -1,9 +1,23 @@
 .card {
 	display: block;
+	padding: 25px;
+	background-color: #fff;
+	box-shadow: 5px 5px 5px 0 #e1e1e1;
 	margin-bottom: 30px;
 	&:nth-last-child(1) {
 		margin-bottom: 0;
 	}
+}
+
+.card__release {
+	margin: -25px -25px 25px -25px;
+	text-align: center;
+	background-color: $color-blue;
+	font-family: $font-family-primary;
+	font-weight: 400;
+	color: #fff;
+	font-size: 80px;
+	padding: 50px;
 }
 
 .card__title {
@@ -25,6 +39,7 @@
 	padding-top: 15px;
 	padding-bottom: 15px;
 	line-height: 1.5em;
+	font-size: 16px;
 }
 
 .card__link {

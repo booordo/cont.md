@@ -77,11 +77,11 @@
             });
             var textBBox = title.getBBox();
             title.transform(`T 0 ${this.cy - textBBox.cy}`);
-            var topText = this.context.text(textBBox.cx, this.cy - textBBox.height / 2 + 10, "Выберите раздел").attr({
+            var topText = this.context.text(textBBox.cx, this.cy - textBBox.height / 2 + 10, "Contabilizare 4.0").attr({
                 class: "puzzle__circle-choice",
                 fill: "#f1c40f"
             });
-            var bottomText = this.context.text(textBBox.cx, this.cy + textBBox.height / 2, "Системы").attr({
+            var bottomText = this.context.text(textBBox.cx, this.cy + textBBox.height / 2, "Система").attr({
                 class: "puzzle__circle-subtitle",
                 textLength: "185",
                 fill: "#fff"
@@ -93,7 +93,7 @@
             var group = this.context.g(circle, title, topText, bottomText);
             group.hover(this._circleHoverInHandler, this._circleHoverOutHandler, group, group);
             group.click(function(e) {
-                document.location.href = "/erp/erp/";
+                document.location.href = "/contabilizare-4-0/erp-system/";
             });
             return group;
         }
@@ -263,27 +263,27 @@
     }
     var elements = [{
             title: ["Розничная", "торговля"],
-            link: "/erp/roznichnaya-torgovlya/"
+            link: "/contabilizare-4-0/erp-system/"
         },
         {
             title: ["Управленческий", "учет"],
-            link: "/erp/upravlencheskiy-uchet/"
+            link: "/contabilizare-4-0/erp-system/"
         },
         {
             title: ["Интернет", "торговля"],
-            link: "/erp/internet-torgovlya/"
+            link: "/contabilizare-4-0/erp-system/"
         },
         {
             title: ["Управление", "продажами"],
-            link: "/erp/upravlenie-prodazhami/"
+            link: "/contabilizare-4-0/erp-system/"
         },
         {
             title: ["Финансовый", "учет"],
-            link: "/erp/finansovyy-uchet/"
+            link: "/contabilizare-4-0/erp-system/"
         },
         {
             title: ["Учет", "производства"],
-            link: "/erp/uchet-proizvodstva/"
+            link: "/contabilizare-4-0/erp-system/"
         }
     ];
     var puzzle = new Puzzle(Snap("#puzzle"), 570, 400, elements);
