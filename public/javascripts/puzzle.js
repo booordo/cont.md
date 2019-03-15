@@ -263,27 +263,27 @@
     }
     var elements = [{
             title: ["Розничная", "торговля"],
-            link: "/contabilizare-4-0/erp-system/"
+            link: "/contabilizare-4-0/retail-trading/"
         },
         {
             title: ["Управленческий", "учет"],
-            link: "/contabilizare-4-0/erp-system/"
+            link: "/contabilizare-4-0/management-accounting/"
         },
         {
             title: ["Интернет", "торговля"],
-            link: "/contabilizare-4-0/erp-system/"
+            link: "/contabilizare-4-0/online-trading/"
         },
         {
             title: ["Управление", "продажами"],
-            link: "/contabilizare-4-0/erp-system/"
+            link: "/contabilizare-4-0/sales-management/"
         },
         {
             title: ["Финансовый", "учет"],
-            link: "/contabilizare-4-0/erp-system/"
+            link: "/contabilizare-4-0/financial-accounting/"
         },
         {
             title: ["Учет", "производства"],
-            link: "/contabilizare-4-0/erp-system/"
+            link: "/contabilizare-4-0/production-accounting/"
         }
     ];
     var puzzle = new Puzzle(Snap("#puzzle"), 570, 400, elements);
