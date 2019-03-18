@@ -2,6 +2,15 @@
   @include flex();
 }
 
+.contact__phone {
+  display: none;
+  color: $color-blue;
+  font-size: 25px;
+  &:hover {
+    color: $color-light-blue;
+  }
+}
+
 .contact__image-box, .contact__title-box {
   @include flex(column, center, flex-start);
 }
@@ -22,4 +31,13 @@
 
 .contact__subtitle {
   font-weight: 300;
+}
+
+@media only screen and (max-width: 900px) {
+  .contact__image-box, .contact__title-box {
+    display: none;
+  }
+  .contact__phone {
+    display: block;
+  }
 }

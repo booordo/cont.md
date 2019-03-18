@@ -1167,8 +1167,6 @@ input {
     box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.1); }
   .header__action {
     display: block; }
-  .header__contact {
-    display: none; }
   .header__social {
     display: none; }
   .header__navbar {
@@ -1271,6 +1269,13 @@ input {
   align-items: stretch;
   flex-wrap: wrap; }
 
+.contact__phone {
+  display: none;
+  color: #2865a9;
+  font-size: 25px; }
+  .contact__phone:hover {
+    color: #3498db; }
+
 .contact__image-box, .contact__title-box {
   display: flex;
   flex-direction: column;
@@ -1288,6 +1293,12 @@ input {
 
 .contact__subtitle {
   font-weight: 300; }
+
+@media only screen and (max-width: 900px) {
+  .contact__image-box, .contact__title-box {
+    display: none; }
+  .contact__phone {
+    display: block; } }
 
 .social {
   display: flex;
