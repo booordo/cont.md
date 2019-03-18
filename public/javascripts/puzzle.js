@@ -93,7 +93,7 @@
             var group = this.context.g(circle, title, topText, bottomText);
             group.hover(this._circleHoverInHandler, this._circleHoverOutHandler, group, group);
             group.click(function(e) {
-                document.location.href = "/contabilizare-4-0/erp-system/";
+                document.location.href = "/contabilizare-4-0/";
             });
             return group;
         }
