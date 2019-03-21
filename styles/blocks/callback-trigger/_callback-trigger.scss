@@ -1,0 +1,28 @@
+.callback-trigger {
+    display: block;
+    position: fixed;
+    right: 50px;
+    bottom: 50px;
+    background-color: $color-green;
+    border-radius: 100%;
+    padding: 20px;
+    font-size: 28px;
+    font-weight: 400;
+    color: #ffffff;
+    cursor: pointer;
+    animation-name: grow;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;   
+}
+
+@media only screen and (max-width: 900px) {
+    .callback-trigger {
+        display: none;
+    }   
+}
+
+@keyframes grow {
+    from {transform: scale(1);}
+    to {transform: scale(1.2)}
+}

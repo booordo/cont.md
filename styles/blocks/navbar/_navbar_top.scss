@@ -80,7 +80,7 @@
     width: 10px;
     height: 10px;
     margin-right: 15px;
-    background-image: url('../images/new_cont/right_angle_full.png');
+    background-image: url('../images/right_angle_full.png');
     background-repeat: no-repeat;
     background-position: center center;
   }
@@ -109,7 +109,7 @@
       &:after {
         content: '';
         display: block;
-        background-image: url('../images/new_cont/download.png');
+        background-image: url('../images/download.png');
         background-size: contain;
         height: 23px;
         width: 18px;

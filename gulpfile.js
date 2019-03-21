@@ -46,6 +46,6 @@ gulp.task('default', gulp.series('browser-sync', 'sass', () => {
 
 
 gulp.task('image', () =>
-	gulp.src('./public/images/new_cont/*')
-	.pipe(gulp.dest('./public/images/new_cont/min/'))
+	gulp.src('./public/images/*')
+	.pipe(gulp.dest('./public/images/min/'))
 );

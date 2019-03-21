@@ -1,0 +1,95 @@
+.callback {
+
+}
+
+.callback_theme_light {
+    .callback__title {
+        color: #111111;   
+    }
+
+    .callback__subtitle {
+        color: #111111;   
+    }
+
+    .callback__input {
+        border: 1px solid #999999;
+        color: #111111;   
+    }
+}
+
+.callback_theme_success {
+    background-color: $color-green;
+}
+
+.callback__title {
+    font-family: $font-family-second;
+    font-weight: 500;
+    color: #ffffff;
+    font-size: 50px;
+    line-height: 55px;
+    text-transform: uppercase;
+    text-align: center;
+    margin: 0;
+}
+
+.callback__subtitle {
+    font-family: $font-family-primary;
+    font-weight: 300;
+    font-style: italic;
+    color: #ffffff;
+    font-size: 23px;
+    line-height: 33px;
+    text-align: center;
+    margin: 0;
+}
+
+.callback__form {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+}
+
+.callback__input {
+    width: 39%;
+    padding: 15px;
+    background-color: #ffffff;
+    font-family: $font-family-primary;
+    color: #111111;
+    font-size: 18px;
+    border-radius: 10px; 
+    &::placeholder {
+        font-size: 18px;
+        color: #999999;
+    }  
+}
+
+.callback__submit {
+    width: 19%;
+    padding: 15px;
+    border: none;
+    background-color: $color-yellow;
+    font-size: 18px;
+    font-weight: 400;
+    color: #111111;
+    font-family: $font-family-primary;
+    border-radius: 10px;
+    cursor: pointer;
+    &:hover {
+        background-color: $color-dark-yellow;   
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    .callback__form {
+        flex-direction: column;
+    }
+    
+    .callback__input {
+        width: 100%;
+        margin-bottom: 25px;   
+    }
+
+    .callback__submit {
+        width: 100%;   
+    }
+}
