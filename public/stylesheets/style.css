@@ -2446,16 +2446,16 @@ input {
     background-color: #c50e29; }
 
 .modal_success .modal__header {
-  background-color: #2e9a40;
+  background-color: #649e6d;
   color: #fff; }
 
 .modal_success .modal__text_alert {
   padding: 15px;
-  background-color: rgba(46, 154, 64, 0.1);
-  border-left: 5px solid #2e9a40; }
+  background-color: rgba(100, 158, 109, 0.1);
+  border-left: 5px solid #649e6d; }
 
 .modal_success .modal__button {
-  background-color: #2e9a40; }
+  background-color: #649e6d; }
   .modal_success .modal__button:hover {
     background-color: #7ecb20; }
 
@@ -2667,7 +2667,7 @@ input {
   color: #111111; }
 
 .callback_theme_success {
-  background-color: #2e9a40; }
+  background-color: #649e6d; }
 
 .callback__title {
   font-family: "Futura", "Times New Roman", serif;
@@ -2734,7 +2734,7 @@ input {
   position: fixed;
   right: 50px;
   bottom: 50px;
-  background-color: #2e9a40;
+  background-color: #649e6d;
   border-radius: 100%;
   padding: 20px;
   font-size: 28px;
