@@ -2668,6 +2668,17 @@ input {
 
 .callback_theme_success {
   background-color: #649e6d; }
+  .callback_theme_success .callback__title {
+    font-family: "Fira Sans", "Arial", sans-serif;
+    font-weight: 300;
+    color: #ffffff;
+    font-size: 24px;
+    line-height: 33px;
+    text-transform: none;
+    text-align: left;
+    margin: 0; }
+    .callback_theme_success .callback__title b {
+      font-weight: 500; }
 
 .callback__title {
   font-family: "Futura", "Times New Roman", serif;
@@ -2734,7 +2745,7 @@ input {
   position: fixed;
   right: 50px;
   bottom: 50px;
-  background-color: #649e6d;
+  background-color: #5d9566;
   border-radius: 100%;
   padding: 20px;
   font-size: 28px;

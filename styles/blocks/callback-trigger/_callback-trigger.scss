@@ -3,7 +3,7 @@
     position: fixed;
     right: 50px;
     bottom: 50px;
-    background-color: $color-green;
+    background-color: darken($color-green, 3);
     border-radius: 100%;
     padding: 20px;
     font-size: 28px;
