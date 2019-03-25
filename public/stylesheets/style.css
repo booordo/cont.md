@@ -980,6 +980,7 @@ input {
     margin-bottom: 0; }
 
 .card__release {
+  position: relative;
   margin: -25px -25px 25px -25px;
   text-align: center;
   background-color: #2865a9;
@@ -988,6 +989,15 @@ input {
   color: #fff;
   font-size: 80px;
   padding: 50px; }
+
+.card__date {
+  position: absolute;
+  top: 15px;
+  left: 0;
+  background-color: #f1c40f;
+  color: #111111;
+  font-size: 16px;
+  padding: 7px 15px; }
 
 .card__title {
   margin: 0;
@@ -2077,13 +2087,22 @@ input {
   padding-bottom: 44px; }
 
 .news-detail__release {
-  text-align: center;
-  background-color: #2865a9;
-  font-weight: 400;
-  color: #fff;
-  font-size: 120px;
+  position: relative;
+  margin-bottom: 30px;
   padding: 50px;
-  margin-bottom: 30px; }
+  text-align: center;
+  font-size: 120px;
+  color: #fff;
+  background-color: #2865a9; }
+
+.news-detail__date {
+  position: absolute;
+  top: 15px;
+  left: 0;
+  background-color: #f1c40f;
+  color: #111111;
+  font-size: 16px;
+  padding: 7px 15px; }
 
 .news-detail__subtitle {
   font-size: 20px;

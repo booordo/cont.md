@@ -6,13 +6,23 @@
 }
 
 .news-detail__release {
-	text-align: center;
-	background-color: $color-blue;
-	font-weight: 400;
-	color: #fff;
-	font-size: 120px;
-	padding: 50px;
+    position: relative;
 	margin-bottom: 30px;
+	padding: 50px;
+	text-align: center;
+	font-size: 120px;
+	color: #fff;
+	background-color: $color-blue;
+}
+
+.news-detail__date {
+    position: absolute;
+    top: 15px;
+    left: 0;
+    background-color: $color-yellow;
+    color: #111111;
+    font-size: 16px;
+    padding: 7px 15px;
 }
 
 .news-detail__subtitle {
