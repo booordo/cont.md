@@ -1,8 +1,13 @@
+.news-detail {
+	font-family: $font-family-primary;
+    font-size: 16px;
+    line-height: 27px;
+    padding-bottom: 44px;
+}
+
 .news-detail__release {
-	position: relative;
 	text-align: center;
 	background-color: $color-blue;
-	font-family: $font-family-primary;
 	font-weight: 400;
 	color: #fff;
 	font-size: 120px;
@@ -11,20 +16,27 @@
 }
 
 .news-detail__subtitle {
-	font-size: 26px;
-	margin-top: 30px;
-	margin-bottom: 15px;
-	&:nth-child(1) {
-		margin-top: 0;
-	}
+	font-size: 20px;
+    line-height: 33px;
+    font-weight: 500;
+    margin: 27px 0 11px;
 }
 
 .news-detail__list {
-	list-style: none;
 	padding: 0;
-	font-family: $font-family-primary;
-	font-size: 16px;
-	line-height: 24px;
-	font-weight: 400;
-	color: #313131;
+    margin: 0 0 27px 27px;
+    .news-detail__list {
+        margin-top: 11px;
+        margin-bottom: 11px;
+    }
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.news-detail__list-item {
+    margin-bottom: 11px;
+    &:last-child {
+        margin-bottom: 0;
+    }
 }
