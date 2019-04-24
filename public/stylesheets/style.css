@@ -2683,6 +2683,10 @@ input {
   display: flex;
   margin-bottom: 44px; }
 
+.info__mark {
+  padding: .2em;
+  background-color: #fcf8e3; }
+
 .callback_theme_light .callback__title {
   color: #111111; }
 
@@ -2882,5 +2886,49 @@ input {
 .personal-orders__item {
   padding: 15px;
   border-bottom: 1px solid #dddddd; }
+
+.ad-panel {
+  background-color: #8E44AD;
+  color: #ffffff;
+  padding: 15px 0; }
+
+.ad-panel_second {
+  background-color: #3498db; }
+
+.ad-panel__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; }
+
+.ad-panel__text {
+  font-size: 18px; }
+
+.ad-panel__controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; }
+
+.ad-panel__button {
+  padding: 10px;
+  color: #ffffff;
+  border: 1px solid #ffffff;
+  text-decoration: none; }
+  .ad-panel__button:hover {
+    background-color: rgba(255, 255, 255, 0.1); }
+
+.ad-panel__button_close {
+  margin-left: 15px;
+  color: #ffffff;
+  border: 1px solid #ffffff; }
+  .ad-panel__button_close:hover {
+    background-color: rgba(255, 255, 255, 0.1); }
+
+@media only screen and (max-width: 900px) {
+  .ad-panel {
+    margin-top: 70px;
+    margin-bottom: -70px; }
+  .ad-panel_second {
+    margin-top: 70px;
+    margin-bottom: -70px; } }
 
 /*# sourceMappingURL=public/maps/style.css.map */
