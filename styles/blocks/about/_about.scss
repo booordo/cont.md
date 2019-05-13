@@ -27,8 +27,9 @@
 		top: 150px;
 	}
 	.about__article_align_bottom {
+		position: absolute;
 		width: 60%;
-		top: 240px;
+		bottom: 40px;
 	}
 }
 
@@ -40,13 +41,10 @@
 		top: 70px;
 	}
 	.about__article_align_bottom {
+		position: absolute;
 		width: 60%;
-		top: 230px;
+		bottom: 250px;
 	}
-}
-
-.about__article {
-	
 }
 
 .about__article_align_left {

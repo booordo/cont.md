@@ -1067,6 +1067,9 @@ input {
   height: auto;
   padding-bottom: 40px; }
 
+.article__link {
+  color: #4ea5e0; }
+
 @media only screen and (max-width: 900px) {
   .article__title {
     text-align: center; }
@@ -1638,8 +1641,9 @@ input {
     width: 60%;
     top: 150px; }
   .about_theme_second .about__article_align_bottom {
+    position: absolute;
     width: 60%;
-    top: 240px; }
+    bottom: 40px; }
 
 .about_theme_third {
   background-image: url("../images/about_3.png");
@@ -1648,8 +1652,9 @@ input {
     width: 65%;
     top: 70px; }
   .about_theme_third .about__article_align_bottom {
+    position: absolute;
     width: 60%;
-    top: 230px; }
+    bottom: 250px; }
 
 .about__article_align_left {
   align-self: flex-start; }
@@ -2686,6 +2691,16 @@ input {
 .info__mark {
   padding: .2em;
   background-color: #fcf8e3; }
+
+@media only screen and (max-width: 900px) {
+  .info__header {
+    font-size: 30px;
+    line-height: 37px; }
+  .info__header_margin {
+    margin-bottom: 40px; }
+  .info__title {
+    font-size: 20px;
+    line-height: 32px; } }
 
 .callback_theme_light .callback__title {
   color: #111111; }
