@@ -2069,6 +2069,10 @@ input {
   margin: 4px 0 0;
   color: #2865a9; }
 
+.price-list__addition-link {
+  color: #7ecb20;
+  text-decoration: none; }
+
 .price-category {
   position: relative; }
 
