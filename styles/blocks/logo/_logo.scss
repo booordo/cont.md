@@ -21,12 +21,14 @@
 .logo__title {
   font-size: 2.133333333333333rem;
   color: $font-color-blue;
+  text-transform: uppercase;
 }
 
 .logo__subtitle {
   font-size: .8666666666666667rem;
   padding-left: 3px;
   color: $font-color-black;
+  text-transform: uppercase;
 }
 
 @media only screen and (max-width: 900px) {
