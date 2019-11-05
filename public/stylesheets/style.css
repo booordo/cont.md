@@ -2123,9 +2123,15 @@ input {
   margin-bottom: 30px;
   padding: 50px;
   text-align: center;
-  font-size: 120px;
+  font-size: 80px;
   color: #fff;
   background-color: #2865a9; }
+
+.news-detail__image {
+  margin: -50px;
+  display: block;
+  width: calc(100% + 100px);
+  height: auto; }
 
 .news-detail__date {
   position: absolute;
