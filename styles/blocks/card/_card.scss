@@ -38,11 +38,10 @@
 }
 
 .card__image {
-	height: 250px;
-	background-repeat: no-repeat;
-	background-size: cover;
-	background-position: 0 0;
-	margin-bottom: 15px;
+	height: auto;
+    width: calc(100% + 100px);
+    margin: -50px;
+    display: block;
 }
 
 .card__text {
