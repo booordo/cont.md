@@ -1,0 +1,49 @@
+extends layout
+
+block content
+    +b.section._size_xs
+        +b.inner
+            +b.title Видео
+            +b.breadcrumbs.mobile.mobile_hide
+                +e.A.link.link(href="/") Главная
+                +e.SPAN.separator
+                +e.A.link.link.link_disable(href="/video/") Видео
+    +b.section._no-padding
+        +b.inner
+            +b.playlists
+                +e.item
+                    +e.item-header
+                        +e.IMG.image(src="/images/Screenshot_2.png")
+                        +e.A.link(href="/video/buh-uchet/")
+                            +b.I.fas.fa-play
+                    +e.item-body
+                        +e.H4.section Глава 1 
+                        +e.H4.title ERP
+                        +e.P.text В данном плейлисте показано как работать с разделом «Ввод остатков» в Contabilizare 4.0 ERP-система на базе 1С Предприятие 8.
+                +e.item
+                    +e.item-header
+                        +e.IMG.image(src="/images/Screenshot_3.png")
+                        +e.A.link(href="/video/buh-uchet/")
+                            +b.I.fas.fa-play
+                    +e.item-body
+                        +e.H4.section Глава 2
+                        +e.H4.title Бухгалтерский учет
+                        +e.P.text В данном плейлисте показано как работать с разделом «Управление закупками» в Contabilizare 4.0 ERP-система на базе 1С:Предприятие 8.
+                +e.item
+                    +e.item-header
+                        +e.IMG.image(src="/images/Screenshot_4.png")
+                        +e.A.link(href="/video/buh-uchet/")
+                            +b.I.fas.fa-play
+                    +e.item-body
+                        +e.H4.section Глава 3
+                        +e.H4.title Управление производством
+                        +e.P.text Ведение производственного учета в модуле «Учет производства».
+                +e.item
+                    +e.item-header
+                        +e.IMG.image(src="/images/Screenshot_5.png")
+                        +e.A.link(href="/video/buh-uchet/")
+                            +b.I.fas.fa-play
+                    +e.item-body
+                        +e.H4.section Глава 4
+                        +e.H4.title Управление торговлей
+                        +e.P.text В данном плейлисте показано как работать с разделом «Управление торговлей» в Contabilizare 4.0 ERP-система на базе 1С Предприятие 8.
