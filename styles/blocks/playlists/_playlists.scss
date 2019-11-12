@@ -73,3 +73,9 @@
 .playlists__update {
     font-size: 10px;
 }
+
+@media only screen and (max-width: 900px) {
+    .playlists__item {
+        width: 100%;
+    }  
+}

@@ -6,7 +6,8 @@ const urlToPage = require('./../middlewares/url-to-page');
 router.use(urlToPage.base);
 
 router.get('/', video.index);
-router.get('/:category', video.category);
-router.get('/:category/:id', video.detail);
+router.get('/:chapter', video.chapter);
+router.get('/:chapter/:category', video.category);
+router.get('/:chapter/:category/:id', video.detail);
 
 module.exports = router;
